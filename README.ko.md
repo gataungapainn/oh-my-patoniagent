@@ -1,7 +1,7 @@
 > [!TIP]
 > **Building in Public**
 >
-> 메인테이너는 oh-my-openagent를 실시간으로 개발하고 유지보수합니다. OpenClaw를 크게 커스터마이즈한 포크 위에서 동작하는 AI 어시스턴트 Jobdori와 함께요.
+> 메인테이너는 oh-my-patoniagent를 실시간으로 개발하고 유지보수합니다. OpenClaw를 크게 커스터마이즈한 포크 위에서 동작하는 AI 어시스턴트 Jobdori와 함께요.
 > 모든 기능, 모든 수정, 모든 이슈 트리아지 — 전부 Discord에서 라이브로.
 >
 > [![Building in Public](./.github/assets/building-in-public.png)](https://discord.gg/PUwSMR9XNk)
@@ -16,22 +16,22 @@
 > [!TIP]
 > 함께해요!
 >
-> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | 기여자와 `oh-my-openagent` 사용자들을 만나려면 [Discord 커뮤니티](https://discord.gg/PUwSMR9XNk)로 오세요. |
+> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | 기여자와 `oh-my-patoniagent` 사용자들을 만나려면 [Discord 커뮤니티](https://discord.gg/PUwSMR9XNk)로 오세요. |
 > | :-----| :----- |
-> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | 원래 제 X 계정에서 `oh-my-openagent` 업데이트를 올렸는데, 계정이 실수로 정지되어 지금은 [@justsisyphus](https://x.com/justsisyphus)에서 대신 업데이트가 올라옵니다. |
+> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | 원래 제 X 계정에서 `oh-my-patoniagent` 업데이트를 올렸는데, 계정이 실수로 정지되어 지금은 [@justsisyphus](https://x.com/justsisyphus)에서 대신 업데이트가 올라옵니다. |
 > | [<img alt="GitHub Follow" src="https://img.shields.io/github/followers/code-yeongyu?style=flat-square&logo=github&labelColor=black&color=24292f" width="156px" />](https://github.com/code-yeongyu) | 다른 프로젝트도 궁금하다면 GitHub에서 [@code-yeongyu](https://github.com/code-yeongyu)를 팔로우하세요. |
 
 <!-- <CENTERED SECTION FOR GITHUB DISPLAY> -->
 
 <div align="center">
 
-[![Oh My OpenAgent](./.github/assets/hero.jpg)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Oh My PatoniAgent](./.github/assets/hero.jpg)](https://github.com/gataungapainn/oh-my-patoniagent#oh-my-patoniagent)
 
-[![Preview](./.github/assets/omo.png)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Preview](./.github/assets/omo.png)](https://github.com/gataungapainn/oh-my-patoniagent#oh-my-patoniagent)
 
 </div>
 
-> 이건 oh-my-openagent의 Team Mode 동작 장면입니다. Kimi K2.6과 GPT-5.5로요.
+> 이건 oh-my-patoniagent의 Team Mode 동작 장면입니다. Kimi K2.6과 GPT-5.5로요.
 
 > Anthropic은 [**우리 때문에 OpenCode를 차단했습니다.**](https://x.com/thdxr/status/2010149530486911014) **진짜입니다.**
 > 그들은 당신을 가둬두고 싶어 합니다. Claude Code는 좋은 감옥이지만, 여전히 감옥입니다.
@@ -41,14 +41,14 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/code-yeongyu/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/releases)
-[![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fohmyopenagent.com%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-opencode)
-[![GitHub Contributors](https://img.shields.io/github/contributors/code-yeongyu/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/graphs/contributors)
-[![GitHub Forks](https://img.shields.io/github/forks/code-yeongyu/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/code-yeongyu/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/code-yeongyu/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/issues)
-[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/blob/dev/LICENSE.md)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/code-yeongyu/oh-my-openagent)
+[![GitHub Release](https://img.shields.io/github/v/release/gataungapainn/oh-my-patoniagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/releases)
+[![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fohmypatoniagent.com%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-patoniagent)
+[![GitHub Contributors](https://img.shields.io/github/contributors/gataungapainn/oh-my-patoniagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/graphs/contributors)
+[![GitHub Forks](https://img.shields.io/github/forks/gataungapainn/oh-my-patoniagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/gataungapainn/oh-my-patoniagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/gataungapainn/oh-my-patoniagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/issues)
+[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/blob/dev/LICENSE.md)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/gataungapainn/oh-my-patoniagent)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-cn.md)
 
@@ -66,7 +66,7 @@
 
 > "4만 5천 줄짜리 Tauri 앱을 Ohmyopencode와 Ralph Loop로 하룻밤 사이에 SaaS 웹 앱으로 전환했습니다. 'interview me' 프롬프트부터 시작해서 질문들에 대한 평가와 개선 제안을 받았어요. 작업 과정을 지켜보는 것도 즐거웠고, 아침에 일어나니 거의 동작하는 사이트가 나와 있더군요!" - [James Hargis](https://x.com/hargabyte/status/2007299688261882202)
 
-> "oh-my-opencode 한 번 써보면 돌아갈 수 없습니다." <br/>- [d0t3ch](https://x.com/d0t3ch/status/2001685618200580503)
+> "oh-my-patoniagent 한 번 써보면 돌아갈 수 없습니다." <br/>- [d0t3ch](https://x.com/d0t3ch/status/2001685618200580503)
 
 > "뭐가 그렇게 대단한지 정확히 말로는 아직 못 하겠는데, 개발 경험이 완전히 다른 차원으로 넘어갔습니다." - [
 苔硯:こけすずり](https://x.com/kokesuzuri/status/2008532913961529372?s=20)
@@ -78,17 +78,17 @@
 
 > "@yeon_gyu_kim 설득할 수 있으면 꼭 뽑으세요. 이 친구 opencode를 혁신했어요." <br/>- [mysticaltech](https://x.com/mysticaltech/status/2001858758608376079)
 
-> "Oh My OpenCode는 진짜 미쳤습니다" - [YouTube - Darren Builds AI](https://www.youtube.com/watch?v=G_Snfh2M41M)
+> "Oh My PatoniAgent는 진짜 미쳤습니다" - [YouTube - Darren Builds AI](https://www.youtube.com/watch?v=G_Snfh2M41M)
 
 ---
 
-# Oh My OpenAgent
+# Oh My PatoniAgent
 
 Claude Code, Codex, 듣도 보도 못한 OSS 모델들까지 저글링 중이시죠. 워크플로우를 손보고, 에이전트를 디버깅하고.
 
 그 일은 우리가 했습니다. 전부 테스트했고, 실전에 먹힌 것만 남겼습니다.
 
-oh-my-openagent를 설치하세요. `ultrawork`를 입력하세요. 끝.
+oh-my-patoniagent를 설치하세요. `ultrawork`를 입력하세요. 끝.
 
 
 ## 설치
@@ -98,8 +98,8 @@ oh-my-openagent를 설치하세요. `ultrawork`를 입력하세요. 끝.
 이 프롬프트를 당신의 LLM 에이전트(Claude Code, AmpCode, Cursor 등)에 붙여넣으세요:
 
 ```
-Install and configure oh-my-openagent by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+Install and configure oh-my-patoniagent by following the instructions here:
+https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 아니면 [설치 가이드](docs/guide/installation.md)를 직접 읽으셔도 됩니다. 다만 진심으로, 에이전트한테 시키세요. 사람은 설정 파일을 오타로 망칩니다.
@@ -109,12 +109,12 @@ https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/do
 설치 가이드를 받아와서 그대로 따르세요:
 
 ```bash
-curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+curl -s https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/docs/guide/installation.md
 ```
 
-**참고**: 배포된 npm 패키지와 CLI 바이너리 이름은 여전히 `oh-my-opencode`입니다(전환 기간 동안 `oh-my-openagent`로도 함께 배포됩니다). `opencode.json` 안에서는 호환성 레이어가 이제 `oh-my-openagent` 플러그인 엔트리를 우선합니다. 기존 `oh-my-opencode` 엔트리도 경고와 함께 여전히 로드됩니다. 플러그인 설정 파일도 여전히 `oh-my-opencode.json`이나 `oh-my-opencode.jsonc`를 많이 씁니다. 전환 기간 동안에는 기존 이름과 새 이름 둘 다 인식됩니다.
+**참고**: 배포된 npm 패키지와 CLI 바이너리 이름은 여전히 `oh-my-patoniagent`입니다(전환 기간 동안 `oh-my-patoniagent`로도 함께 배포됩니다). `opencode.json` 안에서는 호환성 레이어가 이제 `oh-my-patoniagent` 플러그인 엔트리를 우선합니다. 기존 `oh-my-patoniagent` 엔트리도 경고와 함께 여전히 로드됩니다. 플러그인 설정 파일도 여전히 `oh-my-patoniagent.json`이나 `oh-my-patoniagent.jsonc`를 많이 씁니다. 전환 기간 동안에는 기존 이름과 새 이름 둘 다 인식됩니다.
 
-익명 텔레메트리는 활성 설치 수(DAU/WAU/MAU) 집계를 위해 기본적으로 활성화되어 있습니다. 머신당 UTC 하루에 최대 1회만 이벤트가 전송되며, 해시된 설치 식별자를 사용하고 원시 호스트명은 절대 사용하지 않으며 PostHog person profile은 생성되지 않습니다. `OMO_SEND_ANONYMOUS_TELEMETRY=0` 또는 `OMO_DISABLE_POSTHOG=1`로 비활성화할 수 있습니다. [개인정보처리방침](docs/legal/privacy-policy.md)과 [서비스 이용약관](docs/legal/terms-of-service.md)을 참조하세요.
+익명 텔레메트리는 활성 설치 수(DAU/WAU/MAU) 집계를 위해 기본적으로 활성화되어 있습니다. 머신당 UTC 하루에 최대 1회만 이벤트가 전송되며, 해시된 설치 식별자를 사용하고 원시 호스트명은 절대 사용하지 않으며 PostHog person profile은 생성되지 않습니다. `OMPA_SEND_ANONYMOUS_TELEMETRY=0` 또는 `OMPA_DISABLE_POSTHOG=1`로 비활성화할 수 있습니다. [개인정보처리방침](docs/legal/privacy-policy.md)과 [서비스 이용약관](docs/legal/terms-of-service.md)을 참조하세요.
 
 ---
 
@@ -123,7 +123,7 @@ curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/head
 이제 문서 읽는 시대는 지났습니다. 그냥 아래를 에이전트에 붙여넣으세요:
 
 ```
-Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/README.md
+Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/README.md
 ```
 
 
@@ -271,19 +271,19 @@ Skill은 단순 프롬프트가 아닙니다. 각 스킬은:
 
 ---
 
-> **oh-my-openagent가 처음이라면?** 뭘 갖게 되는지는 **[Overview](docs/guide/overview.md)**를, 에이전트들이 어떻게 협업하는지는 **[Orchestration Guide](docs/guide/orchestration.md)**를 참고하세요.
+> **oh-my-patoniagent가 처음이라면?** 뭘 갖게 되는지는 **[Overview](docs/guide/overview.md)**를, 에이전트들이 어떻게 협업하는지는 **[Orchestration Guide](docs/guide/orchestration.md)**를 참고하세요.
 
 ## 제거
 
-oh-my-openagent를 제거하려면:
+oh-my-patoniagent를 제거하려면:
 
 1. **OpenCode 설정에서 플러그인을 제거합니다**
 
-   `~/.config/opencode/opencode.json`(또는 `opencode.jsonc`)을 열어 `plugin` 배열에서 `"oh-my-openagent"` 또는 기존 `"oh-my-opencode"` 항목을 삭제합니다:
+   `~/.config/opencode/opencode.json`(또는 `opencode.jsonc`)을 열어 `plugin` 배열에서 `"oh-my-patoniagent"` 또는 기존 `"oh-my-patoniagent"` 항목을 삭제합니다:
 
    ```bash
    # jq 사용
-   jq '.plugin = [.plugin[] | select(. != "oh-my-openagent" and . != "oh-my-opencode")]' \
+   jq '.plugin = [.plugin[] | select(. != "oh-my-patoniagent" and . != "oh-my-patoniagent")]' \
        ~/.config/opencode/opencode.json > /tmp/oc.json && \
        mv /tmp/oc.json ~/.config/opencode/opencode.json
    ```
@@ -292,12 +292,12 @@ oh-my-openagent를 제거하려면:
 
    ```bash
    # 호환 기간 동안 인식되는 플러그인 설정 파일 제거
-   rm -f ~/.config/opencode/oh-my-openagent.jsonc ~/.config/opencode/oh-my-openagent.json \
-         ~/.config/opencode/oh-my-opencode.jsonc ~/.config/opencode/oh-my-opencode.json
+   rm -f ~/.config/opencode/oh-my-patoniagent.jsonc ~/.config/opencode/oh-my-patoniagent.json \
+         ~/.config/opencode/oh-my-patoniagent.jsonc ~/.config/opencode/oh-my-patoniagent.json
 
    # 프로젝트 설정 제거 (있다면)
-   rm -f .opencode/oh-my-openagent.jsonc .opencode/oh-my-openagent.json \
-         .opencode/oh-my-opencode.jsonc .opencode/oh-my-opencode.json
+   rm -f .opencode/oh-my-patoniagent.jsonc .opencode/oh-my-patoniagent.json \
+         .opencode/oh-my-patoniagent.jsonc .opencode/oh-my-patoniagent.json
    ```
 
 3. **제거 확인**
@@ -323,7 +323,7 @@ oh-my-openagent를 제거하려면:
 - **Built-in MCPs**: websearch(Exa), context7(문서), grep_app(GitHub 검색)
 - **Session Tools**: 세션 히스토리 조회·읽기·검색·분석
 - **Productivity Features**: Ralph Loop, Todo Enforcer, Comment Checker, Think Mode 등
-- **Doctor Command**: 빌트인 진단(`bunx oh-my-opencode doctor`)으로 플러그인 등록, 설정, 모델, 환경 검증
+- **Doctor Command**: 빌트인 진단(`bunx oh-my-patoniagent doctor`)으로 플러그인 등록, 설정, 모델, 환경 검증
 - **Model Fallbacks**: `fallback_models`에 단순 모델 문자열과 per-fallback 객체 설정을 같은 배열에 섞어 쓸 수 있음
 - **File Prompts**: 에이전트 설정에서 `file://`로 프롬프트를 파일에서 로드
 - **Session Recovery**: 세션 에러, 컨텍스트 윈도우 한계, API 실패에서 자동 복구
@@ -336,7 +336,7 @@ oh-my-openagent를 제거하려면:
 자세한 내용은 [Configuration Documentation](docs/reference/configuration.md) 참고.
 
 **요약:**
-- **설정 파일 위치**: 호환성 레이어는 `oh-my-openagent.json[c]`와 기존 `oh-my-opencode.json[c]` 플러그인 설정 파일을 모두 인식합니다. 기존 설치는 아직 기존 이름을 쓰는 경우가 많습니다.
+- **설정 파일 위치**: 호환성 레이어는 `oh-my-patoniagent.json[c]`와 기존 `oh-my-patoniagent.json[c]` 플러그인 설정 파일을 모두 인식합니다. 기존 설치는 아직 기존 이름을 쓰는 경우가 많습니다.
 - **JSONC 지원**: 주석과 trailing comma 지원
 - **Agents**: 어떤 에이전트든 모델, temperature, 프롬프트, 권한을 오버라이드
 - **Built-in Skills**: `playwright`(브라우저 자동화), `git-master`(atomic 커밋)
@@ -359,7 +359,7 @@ oh-my-openagent를 제거하려면:
 
 제가 부딪힌 모든 문제의 해법이 이 플러그인에 박혀 있습니다. 설치만 하고 시작하세요.
 
-OpenCode가 Debian/Arch라면, oh-my-openagent는 Ubuntu/[Omarchy](https://omarchy.org/)입니다.
+OpenCode가 Debian/Arch라면, oh-my-patoniagent는 Ubuntu/[Omarchy](https://omarchy.org/)입니다.
 
 [AmpCode](https://ampcode.com)와 [Claude Code](https://code.claude.com/docs/overview)의 영향을 많이 받았습니다. 기능을 옮겨왔고, 많은 경우 개선까지 했습니다. 지금도 만들고 있습니다. 이건 **Open**Code입니다.
 

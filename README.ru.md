@@ -1,7 +1,7 @@
 > [!TIP]
 > **Building in Public**
 >
-> Мейнтейнер разрабатывает и поддерживает oh-my-openagent в режиме реального времени с помощью Jobdori — ИИ-ассистента на базе глубоко кастомизированной версии OpenClaw.
+> Мейнтейнер разрабатывает и поддерживает oh-my-patoniagent в режиме реального времени с помощью Jobdori — ИИ-ассистента на базе глубоко кастомизированной версии OpenClaw.
 > Каждая фича, каждый фикс, каждый триаж issue — в прямом эфире в нашем Discord.
 >
 > [![Building in Public](./.github/assets/building-in-public.png)](https://discord.gg/PUwSMR9XNk)
@@ -17,22 +17,22 @@
 
 > [!TIP] Будьте с нами!
 >
-> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | Вступайте в наш [Discord](https://discord.gg/PUwSMR9XNk), чтобы общаться с контрибьюторами и пользователями `oh-my-openagent`. |
+> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | Вступайте в наш [Discord](https://discord.gg/PUwSMR9XNk), чтобы общаться с контрибьюторами и пользователями `oh-my-patoniagent`. |
 > | :-----| :----- |
-> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | Обновления `oh-my-openagent` раньше публиковались на моём аккаунте X. <br /> После ошибочной блокировки [@justsisyphus](https://x.com/justsisyphus) публикует обновления вместо меня. |
+> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | Обновления `oh-my-patoniagent` раньше публиковались на моём аккаунте X. <br /> После ошибочной блокировки [@justsisyphus](https://x.com/justsisyphus) публикует обновления вместо меня. |
 > | [<img alt="GitHub Follow" src="https://img.shields.io/github/followers/code-yeongyu?style=flat-square&logo=github&labelColor=black&color=24292f" width="156px" />](https://github.com/code-yeongyu) | Подпишитесь на [@code-yeongyu](https://github.com/code-yeongyu) на GitHub, чтобы следить за другими проектами. |
 
 <!-- <CENTERED SECTION FOR GITHUB DISPLAY> -->
 
 <div align="center">
 
-[![Oh My OpenAgent](./.github/assets/hero.jpg)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Oh My PatoniAgent](./.github/assets/hero.jpg)](https://github.com/gataungapainn/oh-my-patoniagent#oh-my-patoniagent)
 
-[![Preview](./.github/assets/omo.png)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Preview](./.github/assets/omo.png)](https://github.com/gataungapainn/oh-my-patoniagent#oh-my-patoniagent)
 
 </div>
 
-> Это oh-my-openagent в режиме Team Mode. С Kimi K2.6 и GPT-5.5.
+> Это oh-my-patoniagent в режиме Team Mode. С Kimi K2.6 и GPT-5.5.
 
 > Anthropic [**заблокировал OpenCode из-за нас.**](https://x.com/thdxr/status/2010149530486911014) **Да, это правда.**
 > Они хотят держать вас в замкнутой системе. Claude Code — красивая тюрьма, но всё равно тюрьма.
@@ -42,14 +42,14 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/code-yeongyu/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/releases)
-[![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fohmyopenagent.com%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-opencode)
-[![GitHub Contributors](https://img.shields.io/github/contributors/code-yeongyu/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/graphs/contributors)
-[![GitHub Forks](https://img.shields.io/github/forks/code-yeongyu/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/code-yeongyu/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/code-yeongyu/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/issues)
-[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/blob/dev/LICENSE.md)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/code-yeongyu/oh-my-openagent)
+[![GitHub Release](https://img.shields.io/github/v/release/gataungapainn/oh-my-patoniagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/releases)
+[![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fohmypatoniagent.com%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-patoniagent)
+[![GitHub Contributors](https://img.shields.io/github/contributors/gataungapainn/oh-my-patoniagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/graphs/contributors)
+[![GitHub Forks](https://img.shields.io/github/forks/gataungapainn/oh-my-patoniagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/gataungapainn/oh-my-patoniagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/gataungapainn/oh-my-patoniagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/issues)
+[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/blob/dev/LICENSE.md)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/gataungapainn/oh-my-patoniagent)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-cn.md) | [Русский](README.ru.md)
 
@@ -67,7 +67,7 @@
 
 > «За ночь конвертировал приложение на tauri в 45k строк в веб-SaaS с помощью Ohmyopencode и ralph loop. Начал с промпта «проинтервьюируй меня», попросил оценки и рекомендации по вопросам. Было удивительно наблюдать за работой и утром проснуться с почти рабочим сайтом!» — [James Hargis](https://x.com/hargabyte/status/2007299688261882202)
 
-> «Используйте oh-my-opencode — вы не захотите возвращаться назад.» <br/>— [d0t3ch](https://x.com/d0t3ch/status/2001685618200580503)
+> «Используйте oh-my-patoniagent — вы не захотите возвращаться назад.» <br/>— [d0t3ch](https://x.com/d0t3ch/status/2001685618200580503)
 
 > «Пока не могу точно объяснить, почему это так круто, но опыт разработки вышел на совершенно другой уровень.» — [苔硯:こけすずり](https://x.com/kokesuzuri/status/2008532913961529372?s=20)
 
@@ -77,17 +77,17 @@
 
 > «Наймите @yeon_gyu_kim, если сможете его уговорить, этот парень революционизировал opencode.» <br/>— [mysticaltech](https://x.com/mysticaltech/status/2001858758608376079)
 
-> «Oh My OpenCode — это что-то с чем-то» — [YouTube — Darren Builds AI](https://www.youtube.com/watch?v=G_Snfh2M41M)
+> «Oh My PatoniAgent — это что-то с чем-то» — [YouTube — Darren Builds AI](https://www.youtube.com/watch?v=G_Snfh2M41M)
 
 ------
 
-# Oh My OpenAgent
+# Oh My PatoniAgent
 
 Вы жонглируете Claude Code, Codex, случайными OSS-моделями. Настраиваете рабочие процессы. Дебажите агентов.
 
 Мы уже проделали эту работу. Протестировали всё. Оставили только то, что реально работает.
 
-Установите oh-my-openagent. Введите `ultrawork`. Готово.
+Установите oh-my-patoniagent. Введите `ultrawork`. Готово.
 
 ## Установка
 
@@ -96,8 +96,8 @@
 Скопируйте и вставьте этот промпт в ваш LLM-агент (Claude Code, AmpCode, Cursor и т.д.):
 
 ```
-Install and configure oh-my-openagent by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+Install and configure oh-my-patoniagent by following the instructions here:
+https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 Или прочитайте [руководство по установке](docs/guide/installation.md), но серьёзно — пусть агент сделает это за вас. Люди ошибаются в конфигах.
@@ -107,12 +107,12 @@ https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/do
 Загрузите руководство по установке и следуйте ему:
 
 ```bash
-curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+curl -s https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/docs/guide/installation.md
 ```
 
-**Примечание**: Опубликованное имя npm-пакета и CLI-бинарника по-прежнему `oh-my-opencode` (в переходный период пакет также дублируется под именем `oh-my-openagent`). Внутри `opencode.json` слой совместимости теперь предпочитает точку входа плагина `oh-my-openagent`, в то время как устаревшие записи `oh-my-opencode` всё ещё загружаются с предупреждением. Файлы конфигурации плагина по-прежнему часто называются `oh-my-opencode.json` или `oh-my-opencode.jsonc`; в переходный период распознаются как устаревшие, так и новые имена.
+**Примечание**: Опубликованное имя npm-пакета и CLI-бинарника по-прежнему `oh-my-patoniagent` (в переходный период пакет также дублируется под именем `oh-my-patoniagent`). Внутри `opencode.json` слой совместимости теперь предпочитает точку входа плагина `oh-my-patoniagent`, в то время как устаревшие записи `oh-my-patoniagent` всё ещё загружаются с предупреждением. Файлы конфигурации плагина по-прежнему часто называются `oh-my-patoniagent.json` или `oh-my-patoniagent.jsonc`; в переходный период распознаются как устаревшие, так и новые имена.
 
-Анонимная телеметрия включена по умолчанию для подсчёта активных установок (DAU/WAU/MAU). Не более одного события на машину за UTC-сутки, использует хешированный идентификатор установки, никогда не использует исходное имя хоста, и не создаёт PostHog person profile. Можно отключить через `OMO_SEND_ANONYMOUS_TELEMETRY=0` или `OMO_DISABLE_POSTHOG=1`. См. [Политику конфиденциальности](docs/legal/privacy-policy.md) и [Условия обслуживания](docs/legal/terms-of-service.md).
+Анонимная телеметрия включена по умолчанию для подсчёта активных установок (DAU/WAU/MAU). Не более одного события на машину за UTC-сутки, использует хешированный идентификатор установки, никогда не использует исходное имя хоста, и не создаёт PostHog person profile. Можно отключить через `OMPA_SEND_ANONYMOUS_TELEMETRY=0` или `OMPA_DISABLE_POSTHOG=1`. См. [Политику конфиденциальности](docs/legal/privacy-policy.md) и [Условия обслуживания](docs/legal/terms-of-service.md).
 
 ------
 
@@ -121,7 +121,7 @@ curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/head
 Мы вышли за пределы эпохи чтения документации. Просто вставьте это в своего агента:
 
 ```
-Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/README.md
+Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/README.md
 ```
 
 
@@ -270,19 +270,19 @@ project/
 
 ------
 
-> **Впервые в oh-my-openagent?** Прочитайте **[Overview](docs/guide/overview.md)**, чтобы понять, что у вас есть, или ознакомьтесь с **[Orchestration Guide](docs/guide/orchestration.md)**, чтобы узнать, как агенты взаимодействуют.
+> **Впервые в oh-my-patoniagent?** Прочитайте **[Overview](docs/guide/overview.md)**, чтобы понять, что у вас есть, или ознакомьтесь с **[Orchestration Guide](docs/guide/orchestration.md)**, чтобы узнать, как агенты взаимодействуют.
 
 ## Удаление
 
-Чтобы удалить oh-my-openagent:
+Чтобы удалить oh-my-patoniagent:
 
 1. **Удалите плагин из конфига OpenCode**
 
-   Отредактируйте `~/.config/opencode/opencode.json` (или `opencode.jsonc`) и уберите `"oh-my-openagent"` или устаревшую запись `"oh-my-opencode"` из массива `plugin`:
+   Отредактируйте `~/.config/opencode/opencode.json` (или `opencode.jsonc`) и уберите `"oh-my-patoniagent"` или устаревшую запись `"oh-my-patoniagent"` из массива `plugin`:
 
    ```bash
    # С помощью jq
-   jq '.plugin = [.plugin[] | select(. != "oh-my-openagent" and . != "oh-my-opencode")]' \
+   jq '.plugin = [.plugin[] | select(. != "oh-my-patoniagent" and . != "oh-my-patoniagent")]' \
        ~/.config/opencode/opencode.json > /tmp/oc.json && \
        mv /tmp/oc.json ~/.config/opencode/opencode.json
    ```
@@ -291,12 +291,12 @@ project/
 
    ```bash
    # Удалить файлы конфигурации плагина, распознаваемые в переходный период
-   rm -f ~/.config/opencode/oh-my-openagent.jsonc ~/.config/opencode/oh-my-openagent.json \
-         ~/.config/opencode/oh-my-opencode.jsonc ~/.config/opencode/oh-my-opencode.json
+   rm -f ~/.config/opencode/oh-my-patoniagent.jsonc ~/.config/opencode/oh-my-patoniagent.json \
+         ~/.config/opencode/oh-my-patoniagent.jsonc ~/.config/opencode/oh-my-patoniagent.json
 
    # Удалить конфиг проекта (если существует)
-   rm -f .opencode/oh-my-openagent.jsonc .opencode/oh-my-openagent.json \
-         .opencode/oh-my-opencode.jsonc .opencode/oh-my-opencode.json
+   rm -f .opencode/oh-my-patoniagent.jsonc .opencode/oh-my-patoniagent.json \
+         .opencode/oh-my-patoniagent.jsonc .opencode/oh-my-patoniagent.json
    ```
 
 3. **Проверьте удаление**
@@ -323,7 +323,7 @@ project/
 - **Встроенные MCP**: websearch (Exa), context7 (документация), grep_app (поиск по GitHub)
 - **Инструменты сессий**: Список, чтение, поиск и анализ истории сессий
 - **Инструменты продуктивности**: Ralph Loop, Todo Enforcer, Comment Checker, Think Mode и другое
-- **Команда Doctor**: Встроенная диагностика (`bunx oh-my-opencode doctor`) проверяет регистрацию плагина, конфиг, модели и окружение
+- **Команда Doctor**: Встроенная диагностика (`bunx oh-my-patoniagent doctor`) проверяет регистрацию плагина, конфиг, модели и окружение
 - **Фолбэки моделей**: `fallback_models` позволяет смешивать простые строки моделей и объектные настройки per-fallback в одном массиве
 - **Файловые промпты**: Загрузка промптов из файлов через `file://` в конфигурации агентов
 - **Восстановление сессии**: Автоматическое восстановление при ошибках сессии, достижении лимита контекстного окна и сбоях API
@@ -337,7 +337,7 @@ project/
 
 **Краткий обзор:**
 
-- **Расположение конфигов**: Слой совместимости распознаёт как `oh-my-openagent.json[c]`, так и устаревшие `oh-my-opencode.json[c]` файлы конфигурации плагина. Существующие установки по-прежнему часто используют устаревшее имя.
+- **Расположение конфигов**: Слой совместимости распознаёт как `oh-my-patoniagent.json[c]`, так и устаревшие `oh-my-patoniagent.json[c]` файлы конфигурации плагина. Существующие установки по-прежнему часто используют устаревшее имя.
 - **Поддержка JSONC**: Комментарии и конечные запятые поддерживаются
 - **Агенты**: Переопределение моделей, температур, промптов и разрешений для любого агента
 - **Встроенные навыки**: `playwright` (автоматизация браузера), `git-master` (атомарные коммиты)
@@ -360,7 +360,7 @@ project/
 
 Каждая проблема, с которой я столкнулся, — её решение уже встроено в этот плагин. Устанавливайте и работайте.
 
-Если OpenCode — это Debian/Arch, то oh-my-openagent — это Ubuntu/[Omarchy](https://omarchy.org/).
+Если OpenCode — это Debian/Arch, то oh-my-patoniagent — это Ubuntu/[Omarchy](https://omarchy.org/).
 
 Сильно вдохновлено [AmpCode](https://ampcode.com) и [Claude Code](https://code.claude.com/docs/overview). Функции портированы, часто улучшены. Продолжаем строить. Это **Open**Code.
 

@@ -1,7 +1,7 @@
 > [!TIP]
 > **Building in Public**
 >
-> 维护者正在使用 Jobdori 实时开发和维护 oh-my-openagent。Jobdori 是基于 OpenClaw 深度定制的 AI 助手。
+> 维护者正在使用 Jobdori 实时开发和维护 oh-my-patoniagent。Jobdori 是基于 OpenClaw 深度定制的 AI 助手。
 > 每个功能开发、每次修复、每次 Issue 分类，都在 Discord 上实时进行。
 >
 > [![Building in Public](./.github/assets/building-in-public.png)](https://discord.gg/PUwSMR9XNk)
@@ -17,22 +17,22 @@
 > [!TIP]
 > 加入我们！
 >
-> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | 加入我们的 [Discord 社区](https://discord.gg/PUwSMR9XNk)，与贡献者及其他 `oh-my-openagent` 用户交流。 |
+> | [<img alt="Discord link" src="https://img.shields.io/discord/1452487457085063218?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square" width="156px" />](https://discord.gg/PUwSMR9XNk) | 加入我们的 [Discord 社区](https://discord.gg/PUwSMR9XNk)，与贡献者及其他 `oh-my-patoniagent` 用户交流。 |
 > | :-----| :----- |
-> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | 关于 `oh-my-openagent` 的更新过去发布在我的 X 账号上。<br /> 因为账号被意外停用，现在由 [@justsisyphus](https://x.com/justsisyphus) 代为发布更新。 |
+> | [<img alt="X link" src="https://img.shields.io/badge/Follow-%40justsisyphus-00CED1?style=flat-square&logo=x&labelColor=black" width="156px" />](https://x.com/justsisyphus) | 关于 `oh-my-patoniagent` 的更新过去发布在我的 X 账号上。<br /> 因为账号被意外停用，现在由 [@justsisyphus](https://x.com/justsisyphus) 代为发布更新。 |
 > | [<img alt="GitHub Follow" src="https://img.shields.io/github/followers/code-yeongyu?style=flat-square&logo=github&labelColor=black&color=24292f" width="156px" />](https://github.com/code-yeongyu) | 在 GitHub 上关注 [@code-yeongyu](https://github.com/code-yeongyu) 获取更多项目信息。 |
 
 <!-- <CENTERED SECTION FOR GITHUB DISPLAY> -->
 
 <div align="center">
 
-[![Oh My OpenAgent](./.github/assets/hero.jpg)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Oh My PatoniAgent](./.github/assets/hero.jpg)](https://github.com/gataungapainn/oh-my-patoniagent#oh-my-patoniagent)
 
-[![Preview](./.github/assets/omo.png)](https://github.com/code-yeongyu/oh-my-openagent#oh-my-openagent)
+[![Preview](./.github/assets/omo.png)](https://github.com/gataungapainn/oh-my-patoniagent#oh-my-patoniagent)
 
 </div>
 
-> 这是 oh-my-openagent 运行 Team Mode 的画面。搭配 Kimi K2.6 和 GPT-5.5。
+> 这是 oh-my-patoniagent 运行 Team Mode 的画面。搭配 Kimi K2.6 和 GPT-5.5。
 
 > Anthropic [**因为我们屏蔽了 OpenCode。**](https://x.com/thdxr/status/2010149530486911014) **这是真的。**
 > 他们想把你锁住。Claude Code 是个漂亮的牢笼，但仍然是牢笼。
@@ -42,14 +42,14 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/code-yeongyu/oh-my-openagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/releases)
-[![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fohmyopenagent.com%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-opencode)
-[![GitHub Contributors](https://img.shields.io/github/contributors/code-yeongyu/oh-my-openagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/graphs/contributors)
-[![GitHub Forks](https://img.shields.io/github/forks/code-yeongyu/oh-my-openagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/network/members)
-[![GitHub Stars](https://img.shields.io/github/stars/code-yeongyu/oh-my-openagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/code-yeongyu/oh-my-openagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/issues)
-[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/code-yeongyu/oh-my-openagent/blob/dev/LICENSE.md)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/code-yeongyu/oh-my-openagent)
+[![GitHub Release](https://img.shields.io/github/v/release/gataungapainn/oh-my-patoniagent?color=369eff&labelColor=black&logo=github&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/releases)
+[![npm downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Fohmypatoniagent.com%2Fapi%2Fnpm-downloads&style=flat-square)](https://www.npmjs.com/package/oh-my-patoniagent)
+[![GitHub Contributors](https://img.shields.io/github/contributors/gataungapainn/oh-my-patoniagent?color=c4f042&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/graphs/contributors)
+[![GitHub Forks](https://img.shields.io/github/forks/gataungapainn/oh-my-patoniagent?color=8ae8ff&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/gataungapainn/oh-my-patoniagent?color=ffcb47&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/gataungapainn/oh-my-patoniagent?color=ff80eb&labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/issues)
+[![License](https://img.shields.io/badge/license-SUL--1.0-white?labelColor=black&style=flat-square)](https://github.com/gataungapainn/oh-my-patoniagent/blob/dev/LICENSE.md)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/gataungapainn/oh-my-patoniagent)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-cn.md)
 
@@ -67,7 +67,7 @@
 
 > "我用 Ohmyopencode 和 ralph loop 花了一晚上的时间，把一个 45k 行代码的 tauri 应用转换成了 SaaS Web 应用。从面试模式开始，让它对我提供的提示词进行提问和提出建议。看着它工作很有趣，今早醒来看到网站基本已经跑起来了，太震撼了！" - [James Hargis](https://x.com/hargabyte/status/2007299688261882202)
 
-> "用 oh-my-opencode 吧，你绝对回不去了。" <br/>- [d0t3ch](https://x.com/d0t3ch/status/2001685618200580503)
+> "用 oh-my-patoniagent 吧，你绝对回不去了。" <br/>- [d0t3ch](https://x.com/d0t3ch/status/2001685618200580503)
 
 > "我很难准确描述它到底哪里牛逼，但开发体验已经达到完全不同的维度了。" - [苔硯:こけすずり](https://x.com/kokesuzuri/status/2008532913961529372?s=20)
 
@@ -77,17 +77,17 @@
 
 > "如果你们能说服 @yeon_gyu_kim，赶紧招募他。这个人彻底改变了 opencode。" <br/>- [mysticaltech](https://x.com/mysticaltech/status/2001858758608376079)
 
-> "Oh My OpenCode 简直疯了。" - [YouTube - Darren Builds AI](https://www.youtube.com/watch?v=G_Snfh2M41M)
+> "Oh My PatoniAgent 简直疯了。" - [YouTube - Darren Builds AI](https://www.youtube.com/watch?v=G_Snfh2M41M)
 
 ---
 
-# Oh My OpenAgent
+# Oh My PatoniAgent
 
 你同时折腾着 Claude Code、Codex、各种奇奇怪怪的开源模型。配工作流。给 Agent 调 Bug。
 
 这些事我们替你做完了。全部测试过。只留下真正跑得起来的。
 
-装上 oh-my-openagent。敲 `ultrawork`。就完事了。
+装上 oh-my-patoniagent。敲 `ultrawork`。就完事了。
 
 
 ## 安装
@@ -97,8 +97,8 @@
 复制并粘贴以下提示词到你的 LLM Agent (Claude Code, AmpCode, Cursor 等):
 
 ```
-Install and configure oh-my-openagent by following the instructions here:
-https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+Install and configure oh-my-patoniagent by following the instructions here:
+https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/docs/guide/installation.md
 ```
 
 或者你也可以直接去读 [安装指南](docs/guide/installation.md)，但说真的，让 Agent 去干吧。人类配环境总是容易敲错字母。
@@ -108,12 +108,12 @@ https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/do
 获取安装指南并照做：
 
 ```bash
-curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
+curl -s https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/docs/guide/installation.md
 ```
 
-**注意**：已发布的 npm 包名和 CLI 二进制名仍然是 `oh-my-opencode`（过渡期间同时以 `oh-my-openagent` 的名字双重发布）。在 `opencode.json` 中，兼容性层现在优先使用插件入口 `oh-my-openagent`，而旧的 `oh-my-opencode` 条目仍会以警告的形式加载。插件配置文件通常仍使用 `oh-my-opencode.json` 或 `oh-my-opencode.jsonc`，在过渡期间新旧两种文件名都会被识别。
+**注意**：已发布的 npm 包名和 CLI 二进制名仍然是 `oh-my-patoniagent`（过渡期间同时以 `oh-my-patoniagent` 的名字双重发布）。在 `opencode.json` 中，兼容性层现在优先使用插件入口 `oh-my-patoniagent`，而旧的 `oh-my-patoniagent` 条目仍会以警告的形式加载。插件配置文件通常仍使用 `oh-my-patoniagent.json` 或 `oh-my-patoniagent.jsonc`，在过渡期间新旧两种文件名都会被识别。
 
-匿名遥测默认开启，用于统计活跃安装数(DAU/WAU/MAU)。每台机器每个 UTC 日最多发送一次事件,使用哈希化的安装标识符,绝不会使用原始主机名,且不会创建 PostHog person profile。可通过 `OMO_SEND_ANONYMOUS_TELEMETRY=0` 或 `OMO_DISABLE_POSTHOG=1` 禁用。详见 [隐私政策](docs/legal/privacy-policy.md) 和 [服务条款](docs/legal/terms-of-service.md)。
+匿名遥测默认开启，用于统计活跃安装数(DAU/WAU/MAU)。每台机器每个 UTC 日最多发送一次事件,使用哈希化的安装标识符,绝不会使用原始主机名,且不会创建 PostHog person profile。可通过 `OMPA_SEND_ANONYMOUS_TELEMETRY=0` 或 `OMPA_DISABLE_POSTHOG=1` 禁用。详见 [隐私政策](docs/legal/privacy-policy.md) 和 [服务条款](docs/legal/terms-of-service.md)。
 
 ---
 
@@ -122,7 +122,7 @@ curl -s https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/head
 读文档的时代已经过去了。直接把下面这段发给你的 Agent：
 
 ```
-Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/README.md
+Read this and tell me why it's not just another boilerplate: https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/refs/heads/dev/README.md
 ```
 
 
@@ -270,19 +270,19 @@ Agent 会自动顺藤摸瓜加载对应的 Context，免去了你所有的手动
 
 ---
 
-> **第一次用 oh-my-openagent？** 阅读 **[Overview](docs/guide/overview.md)** 了解你拥有哪些功能，或查看 **[Orchestration Guide](docs/guide/orchestration.md)** 了解 Agent 如何协作。
+> **第一次用 oh-my-patoniagent？** 阅读 **[Overview](docs/guide/overview.md)** 了解你拥有哪些功能，或查看 **[Orchestration Guide](docs/guide/orchestration.md)** 了解 Agent 如何协作。
 
 ## 如何卸载
 
-要移除 oh-my-openagent：
+要移除 oh-my-patoniagent：
 
 1. **从你的 OpenCode 配置文件中去掉插件**
 
-   编辑 `~/.config/opencode/opencode.json`（或 `opencode.jsonc`），并从 `plugin` 数组中删掉 `"oh-my-openagent"` 或旧的 `"oh-my-opencode"` 条目：
+   编辑 `~/.config/opencode/opencode.json`（或 `opencode.jsonc`），并从 `plugin` 数组中删掉 `"oh-my-patoniagent"` 或旧的 `"oh-my-patoniagent"` 条目：
 
    ```bash
    # 如果你有 jq 的话
-   jq '.plugin = [.plugin[] | select(. != "oh-my-openagent" and . != "oh-my-opencode")]' \
+   jq '.plugin = [.plugin[] | select(. != "oh-my-patoniagent" and . != "oh-my-patoniagent")]' \
        ~/.config/opencode/opencode.json > /tmp/oc.json && \
        mv /tmp/oc.json ~/.config/opencode/opencode.json
    ```
@@ -291,12 +291,12 @@ Agent 会自动顺藤摸瓜加载对应的 Context，免去了你所有的手动
 
    ```bash
    # 移除兼容期间被识别的插件配置文件
-   rm -f ~/.config/opencode/oh-my-openagent.jsonc ~/.config/opencode/oh-my-openagent.json \
-         ~/.config/opencode/oh-my-opencode.jsonc ~/.config/opencode/oh-my-opencode.json
+   rm -f ~/.config/opencode/oh-my-patoniagent.jsonc ~/.config/opencode/oh-my-patoniagent.json \
+         ~/.config/opencode/oh-my-patoniagent.jsonc ~/.config/opencode/oh-my-patoniagent.json
 
    # 移除当前项目的配置（如果存在）
-   rm -f .opencode/oh-my-openagent.jsonc .opencode/oh-my-openagent.json \
-         .opencode/oh-my-opencode.jsonc .opencode/oh-my-opencode.json
+   rm -f .opencode/oh-my-patoniagent.jsonc .opencode/oh-my-patoniagent.json \
+         .opencode/oh-my-patoniagent.jsonc .opencode/oh-my-patoniagent.json
    ```
 
 3. **确认卸载成功**
@@ -322,7 +322,7 @@ Agent 会自动顺藤摸瓜加载对应的 Context，免去了你所有的手动
 - **内置 MCP**: websearch（Exa）、context7（文档）、grep_app（GitHub 检索）
 - **会话工具**: 列出、读取、搜索、分析会话历史
 - **效率功能**: Ralph Loop、Todo Enforcer、Comment Checker、Think Mode 等
-- **Doctor 命令**: 内置诊断（`bunx oh-my-opencode doctor`），验证插件注册、配置、模型和环境
+- **Doctor 命令**: 内置诊断（`bunx oh-my-patoniagent doctor`），验证插件注册、配置、模型和环境
 - **模型回退**: `fallback_models` 可以在同一数组中混合使用普通模型字符串和 per-fallback 对象配置
 - **文件提示词**: 通过 `file://` 在 Agent 配置中从文件加载提示词
 - **会话恢复**: 从会话错误、上下文窗口上限、API 失败中自动恢复
@@ -335,7 +335,7 @@ Agent 会自动顺藤摸瓜加载对应的 Context，免去了你所有的手动
 详细内容见 [Configuration Documentation](docs/reference/configuration.md)。
 
 **简要概览：**
-- **配置文件位置**: 兼容性层同时识别 `oh-my-openagent.json[c]` 和旧的 `oh-my-opencode.json[c]` 插件配置文件。现有安装仍大多使用旧文件名。
+- **配置文件位置**: 兼容性层同时识别 `oh-my-patoniagent.json[c]` 和旧的 `oh-my-patoniagent.json[c]` 插件配置文件。现有安装仍大多使用旧文件名。
 - **JSONC 支持**: 支持注释和尾逗号
 - **Agents**: 可对任意 Agent 覆盖模型、temperature、prompts 和权限
 - **内置技能**: `playwright`（浏览器自动化）、`git-master`（原子提交）
@@ -358,7 +358,7 @@ Agent 会自动顺藤摸瓜加载对应的 Context，免去了你所有的手动
 
 我踩过的坑、撞过的南墙，它们的终极解法现在全都被硬编码到了这个插件里。你只需要安装，然后直接用。
 
-如果把 OpenCode 喻为底层的 Debian/Arch，那么 oh-my-openagent 毫无疑问就是开箱即用的 Ubuntu/[Omarchy](https://omarchy.org/)。
+如果把 OpenCode 喻为底层的 Debian/Arch，那么 oh-my-patoniagent 毫无疑问就是开箱即用的 Ubuntu/[Omarchy](https://omarchy.org/)。
 
 本项目受到 [AmpCode](https://ampcode.com) 和 [Claude Code](https://code.claude.com/docs/overview) 的深刻启发。我把他们好用的特性全都搬了过来，且在很多地方做了底层强化。它仍在活跃开发中，因为毕竟，这是 **Open**Code。
 
