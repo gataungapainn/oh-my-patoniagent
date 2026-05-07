@@ -18,7 +18,7 @@ function cleanupOmoCacheDir(cacheDir: string): void {
 beforeEach(() => {
   environmentSnapshot = { ...process.env }
   workingDirectorySnapshot = process.cwd()
-  process.env.OMO_DISABLE_POSTHOG = "true"
+  process.env.OMPA_DISABLE_POSTHOG = "true"
   cleanupOmoCacheDir(getOmoOpenCodeCacheDir())
   resetClaudeSessionState()
   resetTaskToastManager()

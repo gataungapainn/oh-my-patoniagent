@@ -1,11 +1,11 @@
 {
-  "name": "oh-my-opencode-linux-x64-baseline",
+  "name": "oh-my-patoniagent-linux-x64-baseline",
   "version": "4.0.0",
-  "description": "Platform-specific binary for oh-my-opencode (linux-x64-baseline, no AVX2)",
+  "description": "Platform-specific binary for oh-my-patoniagent (linux-x64-baseline, no AVX2)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/code-yeongyu/oh-my-openagent"
+    "url": "https://github.com/gataungapainn/oh-my-patoniagent"
   },
   "os": [
     "linux"
@@ -20,6 +20,6 @@
     "bin"
   ],
   "bin": {
-    "oh-my-opencode": "./bin/oh-my-opencode"
+    "oh-my-patoniagent": "./bin/oh-my-patoniagent"
   }
 }
