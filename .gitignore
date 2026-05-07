@@ -6,8 +6,8 @@ node_modules/
 dist/
 
 # Platform binaries (built, not committed)
-packages/*/bin/oh-my-opencode
-packages/*/bin/oh-my-opencode.exe
+packages/*/bin/oh-my-patoniagent
+packages/*/bin/oh-my-patoniagent.exe
 packages/*/bin/*.map
 
 # IDE
