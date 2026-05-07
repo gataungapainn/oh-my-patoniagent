@@ -1,7 +1,7 @@
 const { beforeEach, describe, expect, mock, spyOn, test } = require("bun:test")
 import { tool } from "@opencode-ai/plugin"
 
-import { OhMyOpenCodeConfigSchema, type OhMyOpenCodeConfig } from "../config"
+import { OhMyPatoniAgentConfigSchema, type OhMyPatoniAgentConfig } from "../config"
 import * as openclawRuntimeDispatch from "../openclaw/runtime-dispatch"
 import type { ToolsRecord } from "./types"
 
@@ -81,12 +81,12 @@ const toolFactories: NonNullable<Parameters<typeof createToolRegistry>[0]["toolF
   createTeamListTool: mock(() => fakeTool),
 }
 
-type PluginConfigOverrides = Omit<Partial<OhMyOpenCodeConfig>, "team_mode"> & {
-  team_mode?: Partial<NonNullable<OhMyOpenCodeConfig["team_mode"]>>
+type PluginConfigOverrides = Omit<Partial<OhMyPatoniAgentConfig>, "team_mode"> & {
+  team_mode?: Partial<NonNullable<OhMyPatoniAgentConfig["team_mode"]>>
 }
 
-function createPluginConfig(overrides: PluginConfigOverrides = {}): OhMyOpenCodeConfig {
-  return OhMyOpenCodeConfigSchema.parse({
+function createPluginConfig(overrides: PluginConfigOverrides = {}): OhMyPatoniAgentConfig {
+  return OhMyPatoniAgentConfigSchema.parse({
     git_master: {
       commit_footer: false,
       include_co_authored_by: false,

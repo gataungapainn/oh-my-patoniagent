@@ -36,8 +36,8 @@ describe("getCachedVersion (GH-3257)", () => {
   beforeEach(() => {
     cacheRoot = mkdtempSync(join(tmpdir(), "omo-cached-version-"))
     mockState.candidates = [
-      join(cacheRoot, "node_modules", "oh-my-opencode", "package.json"),
-      join(cacheRoot, "node_modules", "oh-my-openagent", "package.json"),
+      join(cacheRoot, "node_modules", "oh-my-patoniagent", "package.json"),
+      join(cacheRoot, "node_modules", "oh-my-patoniagent", "package.json"),
     ]
     mockState.walkUpResult = null
   })
@@ -48,33 +48,33 @@ describe("getCachedVersion (GH-3257)", () => {
     mockState.walkUpResult = null
   })
 
-  it("returns the version when the package is installed under oh-my-opencode", () => {
-    const pkgDir = join(cacheRoot, "node_modules", "oh-my-opencode")
+  it("returns the version when the package is installed under oh-my-patoniagent", () => {
+    const pkgDir = join(cacheRoot, "node_modules", "oh-my-patoniagent")
     mkdirSync(pkgDir, { recursive: true })
-    writeFileSync(join(pkgDir, "package.json"), JSON.stringify({ name: "oh-my-opencode", version: "3.16.0" }))
+    writeFileSync(join(pkgDir, "package.json"), JSON.stringify({ name: "oh-my-patoniagent", version: "3.16.0" }))
 
     expect(getCachedVersion()).toBe("3.16.0")
   })
 
-  it("returns the version when the package is installed under oh-my-openagent", () => {
-    // GH-3257: npm users who install the aliased `oh-my-openagent` package get
-    // node_modules/oh-my-openagent/package.json, not the canonical oh-my-opencode
+  it("returns the version when the package is installed under oh-my-patoniagent", () => {
+    // GH-3257: npm users who install the aliased `oh-my-patoniagent` package get
+    // node_modules/oh-my-patoniagent/package.json, not the canonical oh-my-patoniagent
     // path. The cached version resolver must check both.
-    const pkgDir = join(cacheRoot, "node_modules", "oh-my-openagent")
+    const pkgDir = join(cacheRoot, "node_modules", "oh-my-patoniagent")
     mkdirSync(pkgDir, { recursive: true })
-    writeFileSync(join(pkgDir, "package.json"), JSON.stringify({ name: "oh-my-openagent", version: "3.16.0" }))
+    writeFileSync(join(pkgDir, "package.json"), JSON.stringify({ name: "oh-my-patoniagent", version: "3.16.0" }))
 
     expect(getCachedVersion()).toBe("3.16.0")
   })
 
-  it("prefers oh-my-opencode when both are installed", () => {
-    const legacyDir = join(cacheRoot, "node_modules", "oh-my-opencode")
+  it("prefers oh-my-patoniagent when both are installed", () => {
+    const legacyDir = join(cacheRoot, "node_modules", "oh-my-patoniagent")
     mkdirSync(legacyDir, { recursive: true })
-    writeFileSync(join(legacyDir, "package.json"), JSON.stringify({ name: "oh-my-opencode", version: "3.16.0" }))
+    writeFileSync(join(legacyDir, "package.json"), JSON.stringify({ name: "oh-my-patoniagent", version: "3.16.0" }))
 
-    const aliasDir = join(cacheRoot, "node_modules", "oh-my-openagent")
+    const aliasDir = join(cacheRoot, "node_modules", "oh-my-patoniagent")
     mkdirSync(aliasDir, { recursive: true })
-    writeFileSync(join(aliasDir, "package.json"), JSON.stringify({ name: "oh-my-openagent", version: "3.15.0" }))
+    writeFileSync(join(aliasDir, "package.json"), JSON.stringify({ name: "oh-my-patoniagent", version: "3.15.0" }))
 
     expect(getCachedVersion()).toBe("3.16.0")
   })
@@ -89,15 +89,15 @@ describe("getCachedVersion (GH-3257)", () => {
     // install at <CACHE_DIR>/node_modules/<pkg>/ can drift independently when
     // bun re-resolves "latest". The flat install must NOT take precedence,
     // because that's the path the user is actually running.
-    const sandboxDir = join(cacheRoot, "oh-my-openagent@latest", "node_modules", "oh-my-openagent")
+    const sandboxDir = join(cacheRoot, "oh-my-patoniagent@latest", "node_modules", "oh-my-patoniagent")
     mkdirSync(sandboxDir, { recursive: true })
     const sandboxPkgJson = join(sandboxDir, "package.json")
-    writeFileSync(sandboxPkgJson, JSON.stringify({ name: "oh-my-openagent", version: "3.17.5" }))
+    writeFileSync(sandboxPkgJson, JSON.stringify({ name: "oh-my-patoniagent", version: "3.17.5" }))
     mockState.walkUpResult = sandboxPkgJson
 
-    const flatDir = join(cacheRoot, "node_modules", "oh-my-opencode")
+    const flatDir = join(cacheRoot, "node_modules", "oh-my-patoniagent")
     mkdirSync(flatDir, { recursive: true })
-    writeFileSync(join(flatDir, "package.json"), JSON.stringify({ name: "oh-my-opencode", version: "3.17.6" }))
+    writeFileSync(join(flatDir, "package.json"), JSON.stringify({ name: "oh-my-patoniagent", version: "3.17.6" }))
 
     expect(getCachedVersion()).toBe("3.17.5")
   })

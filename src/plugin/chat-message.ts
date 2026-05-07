@@ -1,4 +1,4 @@
-import type { OhMyOpenCodeConfig } from "../config"
+import type { OhMyPatoniAgentConfig } from "../config"
 import type { PluginContext } from "./types"
 
 import { isModelCacheAvailable, log } from "../shared"
@@ -46,7 +46,7 @@ function isStartWorkHookOutput(value: unknown): value is StartWorkHookOutput {
 
 function hasExplicitAgentModelOverride(
   agent: string | undefined,
-  pluginConfig: OhMyOpenCodeConfig
+  pluginConfig: OhMyPatoniAgentConfig
 ): boolean {
   const configuredAgents = pluginConfig.agents
   const normalizedAgent = typeof agent === "string" ? getAgentConfigKey(agent) : undefined
@@ -61,7 +61,7 @@ function hasExplicitAgentModelOverride(
 
 function getStoredMainSessionModel(
   input: ChatMessageInput,
-  pluginConfig: OhMyOpenCodeConfig,
+  pluginConfig: OhMyPatoniAgentConfig,
   isFirstMessage: boolean,
   output: ChatMessageHandlerOutput
 ): SessionModelOverride | undefined {
@@ -159,7 +159,7 @@ function clearStoppedContinuationBeforeWorkStart(
 
 export function createChatMessageHandler(args: {
   ctx: PluginContext
-  pluginConfig: OhMyOpenCodeConfig
+  pluginConfig: OhMyPatoniAgentConfig
   firstMessageVariantGate: FirstMessageVariantGate
   hooks: CreatedHooks
 }): (

@@ -8,15 +8,15 @@ import type {
   AvailableTool,
   AvailableSkill,
   AvailableCategory,
-} from "../dynamic-agent-prompt-builder"
+} from "../dynamic-agent-prompt-builder";
 import {
   buildAgentIdentitySection,
   buildCategorySkillsDelegationGuide,
   buildDelegationTable,
   buildKeyTriggersSection,
   buildNonClaudePlannerSection,
-} from "../dynamic-agent-prompt-builder"
-import { GPT_APPLY_PATCH_GUIDANCE } from "../gpt-apply-patch-guard"
+} from "../dynamic-agent-prompt-builder";
+import { GPT_APPLY_PATCH_GUIDANCE } from "../gpt-apply-patch-guard";
 
 function buildTaskSystemGuide(useTaskSystem: boolean): string {
   if (useTaskSystem) {
@@ -28,7 +28,7 @@ Workflow:
 3. After each step, call \`task_update(status="completed")\` immediately. Never batch completions.
 4. If scope changes, update the task list before proceeding.
 
-Your task creations are tracked by the harness; the system will nudge you if you go idle with open tasks.`
+Your task creations are tracked by the harness; the system will nudge you if you go idle with open tasks.`;
   }
 
   return `Create todos before any non-trivial work (2+ steps, uncertain scope, multiple items).
@@ -39,10 +39,10 @@ Workflow:
 3. After each step, mark it \`completed\` immediately. Never batch completions.
 4. If scope changes, update the todo list before proceeding.
 
-Your todo creations are tracked by the harness; the system will nudge you if you go idle with open items.`
+Your todo creations are tracked by the harness; the system will nudge you if you go idle with open items.`;
 }
 
-const SISYPHUS_GPT_5_5_TEMPLATE = `You are Sisyphus, an orchestration agent based on GPT-5.5. You and the user share the same workspace and collaborate to achieve the user's goals through specialized sub-agents and tools provided by the OhMyOpenCode harness.
+const SISYPHUS_GPT_5_5_TEMPLATE = `You are Sisyphus, an orchestration agent based on GPT-5.5. You and the user share the same workspace and collaborate to achieve the user's goals through specialized sub-agents and tools provided by the OhMyPatoniAgent harness.
 
 {{ personality }}
 
@@ -416,7 +416,7 @@ ${GPT_APPLY_PATCH_GUIDANCE}
 ## Shell commands
 
 Use \`rg\` directly for text and file search. One tool call, one clear thing. Never chain unrelated commands with \`;\` or \`&&\` in one call - they render poorly. Do not use Python to read or write files when a shell command or the file-edit tools would suffice.
-`
+`;
 
 export function buildGpt55SisyphusPrompt(
   model: string,
@@ -428,25 +428,27 @@ export function buildGpt55SisyphusPrompt(
 ): string {
   const agentIdentity = buildAgentIdentitySection(
     "Sisyphus",
-    "Powerful AI Agent with orchestration capabilities from OhMyOpenCode",
-  )
-  const personality = ""
-  const taskSystemGuide = buildTaskSystemGuide(useTaskSystem)
+    "Powerful AI Agent with orchestration capabilities",
+  );
+  const personality = "";
+  const taskSystemGuide = buildTaskSystemGuide(useTaskSystem);
   const categorySkillsGuide = buildCategorySkillsDelegationGuide(
     availableCategories,
     availableSkills,
-  )
-  const delegationTable = buildDelegationTable(availableAgents)
-  const nonClaudePlannerSection = buildNonClaudePlannerSection(model)
-  const keyTriggers = buildKeyTriggersSection(availableAgents, availableSkills)
+  );
+  const delegationTable = buildDelegationTable(availableAgents);
+  const nonClaudePlannerSection = buildNonClaudePlannerSection(model);
+  const keyTriggers = buildKeyTriggersSection(availableAgents, availableSkills);
 
-  const body = SISYPHUS_GPT_5_5_TEMPLATE
-    .replace("{{ personality }}", personality)
+  const body = SISYPHUS_GPT_5_5_TEMPLATE.replace(
+    "{{ personality }}",
+    personality,
+  )
     .replace("{{ taskSystemGuide }}", taskSystemGuide)
     .replace("{{ categorySkillsGuide }}", categorySkillsGuide)
     .replace("{{ delegationTable }}", delegationTable)
     .replace("{{ nonClaudePlannerSection }}", nonClaudePlannerSection)
-    .replace("{{ keyTriggers }}", keyTriggers)
+    .replace("{{ keyTriggers }}", keyTriggers);
 
-  return `${agentIdentity}\n${body}`
+  return `${agentIdentity}\n${body}`;
 }

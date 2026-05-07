@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import { homedir } from "node:os";
 import * as path from "path";
-import { OhMyOpenCodeConfigSchema, type OhMyOpenCodeConfig } from "./config";
+import { OhMyPatoniAgentConfigSchema, type OhMyPatoniAgentConfig } from "./config";
 import {
   log,
   containsPath,
@@ -78,8 +78,8 @@ const PARTIAL_STRING_ARRAY_KEYS = new Set([
 
 export function parseConfigPartially(
   rawConfig: Record<string, unknown>
-): OhMyOpenCodeConfig | null {
-  const fullResult = OhMyOpenCodeConfigSchema.safeParse(rawConfig);
+): OhMyPatoniAgentConfig | null {
+  const fullResult = OhMyPatoniAgentConfigSchema.safeParse(rawConfig);
   if (fullResult.success) {
     return fullResult.data;
   }
@@ -96,7 +96,7 @@ export function parseConfigPartially(
       continue;
     }
 
-    const sectionResult = OhMyOpenCodeConfigSchema.safeParse({ [key]: rawConfig[key] });
+    const sectionResult = OhMyPatoniAgentConfigSchema.safeParse({ [key]: rawConfig[key] });
     if (sectionResult.success) {
       const parsed = sectionResult.data as Record<string, unknown>;
       if (parsed[key] !== undefined) {
@@ -117,13 +117,13 @@ export function parseConfigPartially(
     log("Partial config loaded - invalid sections skipped:", invalidSections);
   }
 
-  return partialConfig as OhMyOpenCodeConfig;
+  return partialConfig as OhMyPatoniAgentConfig;
 }
 
 export function loadConfigFromPath(
   configPath: string,
   _ctx: unknown
-): OhMyOpenCodeConfig | null {
+): OhMyPatoniAgentConfig | null {
   try {
     if (fs.existsSync(configPath)) {
       const content = fs.readFileSync(configPath, "utf-8");
@@ -131,7 +131,7 @@ export function loadConfigFromPath(
 
       migrateConfigFile(configPath, rawConfig);
 
-      const result = OhMyOpenCodeConfigSchema.safeParse(rawConfig);
+      const result = OhMyPatoniAgentConfigSchema.safeParse(rawConfig);
 
       if (result.success) {
         log(`Config loaded from ${configPath}`, { agents: result.data.agents });
@@ -164,9 +164,9 @@ export function loadConfigFromPath(
 }
 
 export function mergeConfigs(
-  base: OhMyOpenCodeConfig,
-  override: OhMyOpenCodeConfig
-): OhMyOpenCodeConfig {
+  base: OhMyPatoniAgentConfig,
+  override: OhMyPatoniAgentConfig
+): OhMyPatoniAgentConfig {
   return {
     ...base,
     ...override,
@@ -228,7 +228,7 @@ export function mergeConfigs(
 export function loadPluginConfig(
   directory: string,
   ctx: unknown
-): OhMyOpenCodeConfig {
+): OhMyPatoniAgentConfig {
   // User-level config path - prefer .jsonc over .json
   const configDir = getOpenCodeConfigDir({ binary: "opencode" });
   const userDetected = detectPluginConfigFile(configDir);
@@ -291,11 +291,11 @@ export function loadPluginConfig(
     )
   }
 
-  let config: OhMyOpenCodeConfig =
-    userConfig ?? OhMyOpenCodeConfigSchema.parse({});
+  let config: OhMyPatoniAgentConfig =
+    userConfig ?? OhMyPatoniAgentConfigSchema.parse({});
 
   const canonicalAncestorPathsFarthestFirst = [...canonicalAncestorPathsNearestFirst].reverse()
-  const defaultGitMaster = OhMyOpenCodeConfigSchema.parse({}).git_master
+  const defaultGitMaster = OhMyPatoniAgentConfigSchema.parse({}).git_master
   const ancestorGitMasterOverridesFarthestFirst: Array<Record<string, unknown>> = []
 
   for (const ancestorPath of canonicalAncestorPathsFarthestFirst) {

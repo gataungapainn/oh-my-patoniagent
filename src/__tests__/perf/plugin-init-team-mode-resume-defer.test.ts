@@ -86,7 +86,7 @@ function seedTeamModeConfig(configDir: string, omoBaseDir: string): void {
       base_dir: omoBaseDir,
     },
   }
-  writeFileSync(join(configDir, "oh-my-openagent.json"), JSON.stringify(config, null, 2))
+  writeFileSync(join(configDir, "oh-my-patoniagent.json"), JSON.stringify(config, null, 2))
 }
 
 describe("plugin init defers team-mode resume", () => {

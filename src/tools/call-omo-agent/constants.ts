@@ -8,7 +8,7 @@ export const ALLOWED_AGENTS = [
   "multimodal-looker",
 ] as const
 
-export const CALL_OMO_AGENT_DESCRIPTION = `Spawn explore/librarian agent or custom agents. run_in_background REQUIRED (true=async with task_id, false=sync).
+export const CALL_OMPA_AGENT_DESCRIPTION = `Spawn explore/librarian agent or custom agents. run_in_background REQUIRED (true=async with task_id, false=sync).
 
 Built-in agents:
 {agents}

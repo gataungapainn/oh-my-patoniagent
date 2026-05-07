@@ -1,13 +1,20 @@
 import type { AgentConfig } from "@opencode-ai/sdk";
 import type { AgentMode, AgentPromptMetadata } from "../types";
-import { isGpt5_3CodexModel, isGpt5_5Model, isGptNativeSisyphusModel } from "../types";
+import {
+  isGpt5_3CodexModel,
+  isGpt5_5Model,
+  isGptNativeSisyphusModel,
+} from "../types";
 import type {
   AvailableAgent,
   AvailableTool,
   AvailableSkill,
   AvailableCategory,
 } from "../dynamic-agent-prompt-builder";
-import { categorizeTools, buildAgentIdentitySection } from "../dynamic-agent-prompt-builder";
+import {
+  categorizeTools,
+  buildAgentIdentitySection,
+} from "../dynamic-agent-prompt-builder";
 import { getGptApplyPatchPermission } from "../gpt-apply-patch-guard";
 import { getFrontierToolSchemaPermission } from "../frontier-tool-schema-guard";
 
@@ -18,7 +25,11 @@ import { buildGpt55HephaestusPrompt as buildGpt55Prompt } from "./gpt-5-5";
 
 const MODE: AgentMode = "primary";
 
-export type HephaestusPromptSource = "gpt-5-5" | "gpt-5-4" | "gpt-5-3-codex" | "gpt";
+export type HephaestusPromptSource =
+  | "gpt-5-5"
+  | "gpt-5-4"
+  | "gpt-5-3-codex"
+  | "gpt";
 
 export function getHephaestusPromptSource(
   model?: string,
@@ -104,7 +115,7 @@ function buildDynamicHephaestusPrompt(ctx?: HephaestusContext): string {
 
   const agentIdentity = buildAgentIdentitySection(
     "Hephaestus",
-    "Autonomous deep worker for software engineering from OhMyOpenCode",
+    "Autonomous deep worker for software engineering",
   );
 
   return `${agentIdentity}\n${basePrompt}`;
@@ -131,7 +142,7 @@ export function createHephaestusAgent(
 
   return {
     description:
-      "Autonomous Deep Worker - goal-oriented execution with GPT Codex. Explores thoroughly before acting, uses explore/librarian agents for comprehensive context, completes tasks end-to-end. Inspired by AmpCode deep mode. (Hephaestus - OhMyOpenCode)",
+      "Autonomous Deep Worker - goal-oriented execution with GPT Codex. Explores thoroughly before acting, uses explore/librarian agents for comprehensive context, completes tasks end-to-end. Inspired by AmpCode deep mode. (Hephaestus)",
     mode: MODE,
     model,
     maxTokens: 32000,

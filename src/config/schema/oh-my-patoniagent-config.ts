@@ -26,11 +26,11 @@ import { TmuxConfigSchema } from "./tmux"
 import { StartWorkConfigSchema } from "./start-work"
 import { WebsearchConfigSchema } from "./websearch"
 
-export const OhMyOpenCodeConfigSchema = z.object({
+export const OhMyPatoniAgentConfigSchema = z.object({
   $schema: z.string().optional(),
   /** Enable new task system (default: false) */
   new_task_system_enabled: z.boolean().optional(),
-  /** Default agent name for `oh-my-opencode run` (env: OPENCODE_DEFAULT_AGENT) */
+  /** Default agent name for `oh-my-patoniagent run` (env: OPENCODE_DEFAULT_AGENT) */
   default_run_agent: z.string().optional(),
   /** Paths to external agent definition files (.md or .json) */
   agent_definitions: AgentDefinitionsConfigSchema,
@@ -83,4 +83,4 @@ export const OhMyOpenCodeConfigSchema = z.object({
   _migrations: z.array(z.string()).optional(),
 })
 
-export type OhMyOpenCodeConfig = z.infer<typeof OhMyOpenCodeConfigSchema>
+export type OhMyPatoniAgentConfig = z.infer<typeof OhMyPatoniAgentConfigSchema>

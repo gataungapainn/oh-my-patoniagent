@@ -45,5 +45,5 @@ export function getOmoConfigPath(): string {
   const configDir = getConfigContext().paths.configDir
   const detected = detectPluginConfigFile(configDir)
   if (detected.format !== "none") return detected.path
-  return getConfigContext().paths.omoConfig
+  return getConfigContext().paths.ompaConfig
 }

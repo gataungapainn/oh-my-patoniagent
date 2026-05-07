@@ -3,7 +3,7 @@
 import { afterEach, beforeEach, describe, expect, it, mock, spyOn } from "bun:test"
 import type { PluginInput } from "@opencode-ai/plugin"
 
-import { OhMyOpenCodeConfigSchema } from "./config/schema/oh-my-opencode-config"
+import { OhMyPatoniAgentConfigSchema } from "./config/schema/oh-my-patoniagent-config"
 import { createManagers } from "./create-managers"
 import * as openclawRuntimeDispatch from "./openclaw/runtime-dispatch"
 import { createModelCacheState } from "./plugin-state"
@@ -131,7 +131,7 @@ describe("createManagers", () => {
   it("#given tmux integration is disabled #when managers are created #then it does not mark the tmux server as running", () => {
     const args = {
       ctx: createContext("/tmp"),
-      pluginConfig: OhMyOpenCodeConfigSchema.parse({}),
+      pluginConfig: OhMyPatoniAgentConfigSchema.parse({}),
       tmuxConfig: createTmuxConfig(false),
       modelCacheState: createModelCacheState(),
       backgroundNotificationHookEnabled: false,
@@ -146,7 +146,7 @@ describe("createManagers", () => {
   it("#given tmux integration is enabled #when managers are created #then it marks the tmux server as running", () => {
     const args = {
       ctx: createContext("/tmp"),
-      pluginConfig: OhMyOpenCodeConfigSchema.parse({}),
+      pluginConfig: OhMyPatoniAgentConfigSchema.parse({}),
       tmuxConfig: createTmuxConfig(true),
       modelCacheState: createModelCacheState(),
       backgroundNotificationHookEnabled: false,
@@ -161,7 +161,7 @@ describe("createManagers", () => {
   it("#given openclaw is enabled #when the background session-created callback runs #then it dispatches openclaw with the tracked pane id", async () => {
     const args = {
       ctx: createContext("/tmp/project"),
-      pluginConfig: OhMyOpenCodeConfigSchema.parse({
+      pluginConfig: OhMyPatoniAgentConfigSchema.parse({
         openclaw: {
           enabled: true,
           gateways: {},

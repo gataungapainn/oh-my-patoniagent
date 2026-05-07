@@ -4,7 +4,7 @@ import { describe, expect, mock, test } from "bun:test"
 
 import { tool } from "@opencode-ai/plugin"
 
-import { OhMyOpenCodeConfigSchema } from "../config"
+import { OhMyPatoniAgentConfigSchema } from "../config"
 import type { OpencodeClient } from "../tools/delegate-task/types"
 import { createToolRegistry } from "./tool-registry"
 
@@ -17,7 +17,7 @@ const fakeTool = tool({
 })
 
 function createPluginConfig() {
-  return OhMyOpenCodeConfigSchema.parse({
+  return OhMyPatoniAgentConfigSchema.parse({
     git_master: {
       commit_footer: false,
       include_co_authored_by: false,

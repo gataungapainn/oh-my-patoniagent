@@ -34,7 +34,7 @@ describe("migrateConfigFile sidecar write ordering", () => {
   test("writes the migrated config before recording the sidecar when both writes succeed", () => {
     // given
     const workdir = createWorkdir()
-    const configPath = join(workdir, "oh-my-opencode.json")
+    const configPath = join(workdir, "oh-my-patoniagent.json")
     const rawConfig = createLegacyConfig()
 
     writeFileSync(configPath, JSON.stringify(rawConfig, null, 2) + "\n")
@@ -64,7 +64,7 @@ describe("migrateConfigFile sidecar write ordering", () => {
   test("skips the sidecar when the config write fails so the migration retries on next startup", () => {
     // given
     const workdir = createWorkdir()
-    const configPath = join(workdir, "missing-parent", "oh-my-opencode.json")
+    const configPath = join(workdir, "missing-parent", "oh-my-patoniagent.json")
     const firstAttemptConfig = createLegacyConfig()
 
     // when
@@ -95,7 +95,7 @@ describe("migrateConfigFile sidecar write ordering", () => {
   test("preserves _migrations in the config when the sidecar write fails after the config write succeeds", () => {
     // given
     const workdir = createWorkdir()
-    const configPath = join(workdir, "oh-my-opencode.json")
+    const configPath = join(workdir, "oh-my-patoniagent.json")
     const rawConfig = createLegacyConfig()
 
     writeFileSync(configPath, JSON.stringify(rawConfig, null, 2) + "\n")
@@ -122,7 +122,7 @@ describe("migrateConfigFile sidecar write ordering", () => {
   test("treats top-level appliedMigrations as migration history and does not reapply the model update", () => {
     // given
     const workdir = createWorkdir()
-    const configPath = join(workdir, "oh-my-openagent.json")
+    const configPath = join(workdir, "oh-my-patoniagent.json")
     const rawConfig: Record<string, unknown> = {
       agents: {
         oracle: { model: "anthropic/claude-opus-4-6" },
@@ -155,7 +155,7 @@ describe("migrateConfigFile backup skipping", () => {
   test("skips backup when file content is identical after migration", () => {
     // given - config with legacy key that migrates to same on-disk content
     const workdir = createWorkdir()
-    const configPath = join(workdir, "oh-my-opencode.json")
+    const configPath = join(workdir, "oh-my-patoniagent.json")
     const migratedContent = {
       disabled_hooks: ["comment-checker"],
     }
@@ -180,7 +180,7 @@ describe("migrateConfigFile backup skipping", () => {
   test("creates backup when file content actually changes", () => {
     // given - config with model that needs migration
     const workdir = createWorkdir()
-    const configPath = join(workdir, "oh-my-opencode.json")
+    const configPath = join(workdir, "oh-my-patoniagent.json")
     const rawConfig = {
       agents: {
         prometheus: { model: "anthropic/claude-opus-4-5" },

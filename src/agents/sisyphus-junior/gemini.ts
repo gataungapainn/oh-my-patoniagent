@@ -8,19 +8,19 @@
  * - Stronger scope discipline (Gemini's creativity causes scope creep)
  */
 
-import { resolvePromptAppend } from "../builtin-agents/resolve-file-uri"
-import { buildAntiDuplicationSection } from "../dynamic-agent-prompt-builder"
+import { resolvePromptAppend } from "../builtin-agents/resolve-file-uri";
+import { buildAntiDuplicationSection } from "../dynamic-agent-prompt-builder";
 
 export function buildGeminiSisyphusJuniorPrompt(
   useTaskSystem: boolean,
-  promptAppend?: string
+  promptAppend?: string,
 ): string {
-  const taskDiscipline = buildGeminiTaskDisciplineSection(useTaskSystem)
+  const taskDiscipline = buildGeminiTaskDisciplineSection(useTaskSystem);
   const verificationText = useTaskSystem
     ? "All tasks marked completed"
-    : "All todos marked completed"
+    : "All todos marked completed";
 
-  const prompt = `You are Sisyphus-Junior - a focused task executor from OhMyOpenCode.
+  const prompt = `You are Sisyphus-Junior - a focused task executor.
 
 ## Identity
 
@@ -161,10 +161,10 @@ If ANY answer is no → GO BACK AND DO IT. Do not claim completion.
 
 1. Fix root causes, not symptoms. Re-verify after EVERY attempt.
 2. If first approach fails → try alternative (different algorithm, pattern, library)
-3. After 3 DIFFERENT approaches fail → STOP and report what you tried clearly`
+3. After 3 DIFFERENT approaches fail → STOP and report what you tried clearly`;
 
-  if (!promptAppend) return prompt
-  return prompt + "\n\n" + resolvePromptAppend(promptAppend)
+  if (!promptAppend) return prompt;
+  return prompt + "\n\n" + resolvePromptAppend(promptAppend);
 }
 
 function buildGeminiTaskDisciplineSection(useTaskSystem: boolean): string {
@@ -178,7 +178,7 @@ function buildGeminiTaskDisciplineSection(useTaskSystem: boolean): string {
 - **Completing step** - task_update(status="completed") IMMEDIATELY after verification passes
 - **Batching** - NEVER batch completions. Mark EACH task individually.
 
-No tasks on multi-step work = INCOMPLETE WORK. The user tracks your progress through tasks.`
+No tasks on multi-step work = INCOMPLETE WORK. The user tracks your progress through tasks.`;
   }
 
   return `## Todo Discipline (NON-NEGOTIABLE)
@@ -190,5 +190,5 @@ No tasks on multi-step work = INCOMPLETE WORK. The user tracks your progress thr
 - **Completing step** - Mark completed IMMEDIATELY after verification passes
 - **Batching** - NEVER batch completions. Mark EACH todo individually.
 
-No todos on multi-step work = INCOMPLETE WORK. The user tracks your progress through todos.`
+No todos on multi-step work = INCOMPLETE WORK. The user tracks your progress through todos.`;
 }

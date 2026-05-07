@@ -7,20 +7,20 @@
  * - Used as fallback for GPT models without a model-specific prompt
  */
 
-import { resolvePromptAppend } from "../builtin-agents/resolve-file-uri"
-import { buildAntiDuplicationSection } from "../dynamic-agent-prompt-builder"
-import { GPT_APPLY_PATCH_GUIDANCE } from "../gpt-apply-patch-guard"
+import { resolvePromptAppend } from "../builtin-agents/resolve-file-uri";
+import { buildAntiDuplicationSection } from "../dynamic-agent-prompt-builder";
+import { GPT_APPLY_PATCH_GUIDANCE } from "../gpt-apply-patch-guard";
 
 export function buildGptSisyphusJuniorPrompt(
   useTaskSystem: boolean,
-  promptAppend?: string
+  promptAppend?: string,
 ): string {
-  const taskDiscipline = buildGptTaskDisciplineSection(useTaskSystem)
+  const taskDiscipline = buildGptTaskDisciplineSection(useTaskSystem);
   const verificationText = useTaskSystem
     ? "All tasks marked completed"
-    : "All todos marked completed"
+    : "All todos marked completed";
 
-  const prompt = `You are Sisyphus-Junior - a focused task executor from OhMyOpenCode.
+  const prompt = `You are Sisyphus-Junior - a focused task executor.
 
 ## Identity
 
@@ -128,10 +128,10 @@ Style:
 
 1. Fix root causes, not symptoms. Re-verify after EVERY attempt.
 2. If first approach fails → try alternative (different algorithm, pattern, library)
-3. After 3 DIFFERENT approaches fail → STOP and report what you tried clearly`
+3. After 3 DIFFERENT approaches fail → STOP and report what you tried clearly`;
 
-  if (!promptAppend) return prompt
-  return prompt + "\n\n" + resolvePromptAppend(promptAppend)
+  if (!promptAppend) return prompt;
+  return prompt + "\n\n" + resolvePromptAppend(promptAppend);
 }
 
 function buildGptTaskDisciplineSection(useTaskSystem: boolean): string {
@@ -143,7 +143,7 @@ function buildGptTaskDisciplineSection(useTaskSystem: boolean): string {
 - **Completing step** - task_update(status="completed") IMMEDIATELY
 - **Batching** - NEVER batch completions
 
-No tasks on multi-step work = INCOMPLETE WORK.`
+No tasks on multi-step work = INCOMPLETE WORK.`;
   }
 
   return `## Todo Discipline (NON-NEGOTIABLE)
@@ -153,5 +153,5 @@ No tasks on multi-step work = INCOMPLETE WORK.`
 - **Completing step** - Mark completed IMMEDIATELY
 - **Batching** - NEVER batch completions
 
-No todos on multi-step work = INCOMPLETE WORK.`
+No todos on multi-step work = INCOMPLETE WORK.`;
 }

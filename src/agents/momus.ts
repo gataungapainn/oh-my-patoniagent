@@ -384,7 +384,7 @@ export function createMomusAgent(model: string): AgentConfig {
 
   const base = {
     description:
-      "Expert reviewer for evaluating work plans against rigorous clarity, verifiability, and completeness standards. (Momus - OhMyOpenCode)",
+      "Expert reviewer for evaluating work plans against rigorous clarity, verifiability, and completeness standards. (Momus)",
     mode: MODE,
     model,
     temperature: 0.1,
@@ -445,5 +445,5 @@ export const momusPromptMetadata: AgentPromptMetadata = {
     "For trivial plans that don't need formal review",
   ],
   keyTrigger:
-    "Work plan saved to `.sisyphus/plans/*.md` → invoke Momus with the file path as the sole prompt (e.g. `prompt=\".sisyphus/plans/my-plan.md\"`). Do NOT invoke Momus for inline plans or todo lists.",
+    'Work plan saved to `.sisyphus/plans/*.md` → invoke Momus with the file path as the sole prompt (e.g. `prompt=".sisyphus/plans/my-plan.md"`). Do NOT invoke Momus for inline plans or todo lists.',
 };

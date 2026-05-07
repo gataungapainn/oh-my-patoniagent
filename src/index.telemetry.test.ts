@@ -92,7 +92,7 @@ function installModuleMocks(): void {
   }))
 }
 
-describe("oh-my-openagent telemetry isolation", () => {
+describe("oh-my-patoniagent telemetry isolation", () => {
   beforeEach(() => {
     mock.restore()
     installModuleMocks()

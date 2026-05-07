@@ -30,7 +30,7 @@ export function writeOmoConfig(installConfig: InstallConfig): ConfigMergeResult 
   const detectedConfigPath = getOmoConfigPath()
   const canonicalConfigPath = join(dirname(detectedConfigPath), `${CONFIG_BASENAME}${extname(detectedConfigPath) || ".json"}`)
   const shouldMigrateLegacyPath = basename(detectedConfigPath).startsWith(LEGACY_CONFIG_BASENAME)
-  const omoConfigPath = shouldMigrateLegacyPath
+  const ompaConfigPath = shouldMigrateLegacyPath
     ? ((migrateLegacyConfigFile(detectedConfigPath) || existsSync(canonicalConfigPath))
         ? canonicalConfigPath
         : detectedConfigPath)
@@ -39,49 +39,49 @@ export function writeOmoConfig(installConfig: InstallConfig): ConfigMergeResult 
   try {
     const newConfig = generateOmoConfig(installConfig)
 
-    if (existsSync(omoConfigPath)) {
-      const backupResult = backupConfigFile(omoConfigPath)
+    if (existsSync(ompaConfigPath)) {
+      const backupResult = backupConfigFile(ompaConfigPath)
       if (!backupResult.success) {
         return {
           success: false,
-          configPath: omoConfigPath,
+          configPath: ompaConfigPath,
           error: `Failed to create backup: ${backupResult.error}`,
         }
       }
 
       try {
-        const stat = statSync(omoConfigPath)
-        const content = readFileSync(omoConfigPath, "utf-8")
+        const stat = statSync(ompaConfigPath)
+        const content = readFileSync(ompaConfigPath, "utf-8")
 
         if (stat.size === 0 || isEmptyOrWhitespace(content)) {
-          writeFileSync(omoConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
-          return { success: true, configPath: omoConfigPath }
+          writeFileSync(ompaConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
+          return { success: true, configPath: ompaConfigPath }
         }
 
         const existing = parseJsonc<Record<string, unknown>>(content)
         if (!existing || typeof existing !== "object" || Array.isArray(existing)) {
-          writeFileSync(omoConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
-          return { success: true, configPath: omoConfigPath }
+          writeFileSync(ompaConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
+          return { success: true, configPath: ompaConfigPath }
         }
 
         const merged = deepMergeRecord(newConfig, existing)
-        writeFileSync(omoConfigPath, JSON.stringify(merged, null, 2) + "\n")
+        writeFileSync(ompaConfigPath, JSON.stringify(merged, null, 2) + "\n")
       } catch (parseErr) {
         if (parseErr instanceof SyntaxError) {
-          writeFileSync(omoConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
-          return { success: true, configPath: omoConfigPath }
+          writeFileSync(ompaConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
+          return { success: true, configPath: ompaConfigPath }
         }
         throw parseErr
       }
     } else {
-      writeFileSync(omoConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
+      writeFileSync(ompaConfigPath, JSON.stringify(newConfig, null, 2) + "\n")
     }
 
-    return { success: true, configPath: omoConfigPath }
+    return { success: true, configPath: ompaConfigPath }
   } catch (err) {
     return {
       success: false,
-      configPath: omoConfigPath,
+      configPath: ompaConfigPath,
       error: formatErrorWithSuggestion(err, `write ${CONFIG_BASENAME} config`),
     }
   }

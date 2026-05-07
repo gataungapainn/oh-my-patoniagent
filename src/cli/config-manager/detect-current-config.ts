@@ -14,8 +14,8 @@ function detectProvidersFromOmoConfig(): {
   hasOpencodeGo: boolean
   hasVercelAiGateway: boolean
 } {
-  const omoConfigPath = getOmoConfigPath()
-  if (!existsSync(omoConfigPath)) {
+  const ompaConfigPath = getOmoConfigPath()
+  if (!existsSync(ompaConfigPath)) {
     return {
       hasOpenAI: true,
       hasOpencodeZen: true,
@@ -27,9 +27,9 @@ function detectProvidersFromOmoConfig(): {
   }
 
   try {
-    const content = readFileSync(omoConfigPath, "utf-8")
-    const omoConfig = parseJsonc<Record<string, unknown>>(content)
-    if (!omoConfig || typeof omoConfig !== "object") {
+    const content = readFileSync(ompaConfigPath, "utf-8")
+    const ompaConfig = parseJsonc<Record<string, unknown>>(content)
+    if (!ompaConfig || typeof ompaConfig !== "object") {
       return {
         hasOpenAI: true,
         hasOpencodeZen: true,
@@ -40,7 +40,7 @@ function detectProvidersFromOmoConfig(): {
       }
     }
 
-    const configStr = JSON.stringify(omoConfig)
+    const configStr = JSON.stringify(ompaConfig)
     const hasOpenAI = configStr.includes('"openai/')
     const hasOpencodeZen = configStr.includes('"opencode/')
     const hasZaiCodingPlan = configStr.includes('"zai-coding-plan/')

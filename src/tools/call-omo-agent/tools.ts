@@ -1,5 +1,5 @@
 import { tool, type PluginInput, type ToolDefinition } from "@opencode-ai/plugin"
-import { ALLOWED_AGENTS, CALL_OMO_AGENT_DESCRIPTION } from "./constants"
+import { ALLOWED_AGENTS, CALL_OMPA_AGENT_DESCRIPTION } from "./constants"
 import type { CallOmoAgentArgs, ToolContextWithMetadata } from "./types"
 import type { BackgroundManager } from "../../features/background-agent"
 import type { ModelFallbackControllerAccessor } from "../../hooks/model-fallback"
@@ -105,7 +105,7 @@ export function createCallOmoAgent(
   const agentDescriptions = ALLOWED_AGENTS.map(
     (name) => `- ${name}: Specialized agent for ${name} tasks`,
   ).join("\n");
-  const description = CALL_OMO_AGENT_DESCRIPTION.replace(
+  const description = CALL_OMPA_AGENT_DESCRIPTION.replace(
     "{agents}",
     agentDescriptions,
   );

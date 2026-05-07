@@ -1,6 +1,6 @@
 ---
 name: agents-directory
-description: Developer reference for all 11 Oh My OpenAgent agent definitions, factory patterns, tool restrictions, and model routing.
+description: Developer reference for all 11 Oh My PatoniAgent agent definitions, factory patterns, tool restrictions, and model routing.
 ---
 
 # src/agents/ — 11 Agent Definitions

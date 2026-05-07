@@ -1,7 +1,7 @@
 import { describe, expect, it } from "bun:test"
-import { OhMyOpenCodeConfigSchema } from "./oh-my-opencode-config"
+import { OhMyPatoniAgentConfigSchema } from "./oh-my-patoniagent-config"
 
-describe("OhMyOpenCodeConfigSchema team_mode", () => {
+describe("OhMyPatoniAgentConfigSchema team_mode", () => {
   it("accepts team_mode when provided", () => {
     // given
     const rawConfig = {
@@ -12,7 +12,7 @@ describe("OhMyOpenCodeConfigSchema team_mode", () => {
     }
 
     // when
-    const result = OhMyOpenCodeConfigSchema.safeParse(rawConfig)
+    const result = OhMyPatoniAgentConfigSchema.safeParse(rawConfig)
 
     // then
     expect(result.success).toBe(true)
@@ -29,7 +29,7 @@ describe("OhMyOpenCodeConfigSchema team_mode", () => {
     const rawConfig = {}
 
     // when
-    const result = OhMyOpenCodeConfigSchema.safeParse(rawConfig)
+    const result = OhMyPatoniAgentConfigSchema.safeParse(rawConfig)
 
     // then
     expect(result.success).toBe(true)

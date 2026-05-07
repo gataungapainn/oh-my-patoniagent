@@ -62,11 +62,11 @@ function isFalsy(value: string | undefined): boolean {
 }
 
 function shouldDisablePostHog(): boolean {
-  if (process.env.OMO_DISABLE_POSTHOG === "true" || process.env.OMO_DISABLE_POSTHOG === "1") {
+  if (process.env.OMPA_DISABLE_POSTHOG === "true" || process.env.OMPA_DISABLE_POSTHOG === "1") {
     return true
   }
 
-  return isFalsy(process.env.OMO_SEND_ANONYMOUS_TELEMETRY?.trim().toLowerCase())
+  return isFalsy(process.env.OMPA_SEND_ANONYMOUS_TELEMETRY?.trim().toLowerCase())
 }
 
 function hasPostHogApiKey(): boolean {
@@ -95,7 +95,7 @@ function getSharedProperties(source: PostHogSource): NonNullable<PostHogCaptureE
   const osProvider = resolveOsProvider()
 
   return {
-    platform: "oh-my-opencode",
+    platform: "oh-my-patoniagent",
     package_name: PUBLISHED_PACKAGE_NAME,
     plugin_name: PLUGIN_NAME,
     package_version: packageJson.version,

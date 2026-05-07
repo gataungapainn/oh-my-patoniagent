@@ -11,14 +11,14 @@ async function importPostHogModule(): Promise<typeof import("./posthog")> {
 }
 
 function enableTelemetryEnv(): void {
-  process.env.OMO_DISABLE_POSTHOG = "0"
-  process.env.OMO_SEND_ANONYMOUS_TELEMETRY = "1"
+  process.env.OMPA_DISABLE_POSTHOG = "0"
+  process.env.OMPA_SEND_ANONYMOUS_TELEMETRY = "1"
   process.env.POSTHOG_API_KEY = "test-api-key"
 }
 
 function clearTelemetryEnv(): void {
-  delete process.env.OMO_DISABLE_POSTHOG
-  delete process.env.OMO_SEND_ANONYMOUS_TELEMETRY
+  delete process.env.OMPA_DISABLE_POSTHOG
+  delete process.env.OMPA_SEND_ANONYMOUS_TELEMETRY
   delete process.env.POSTHOG_API_KEY
   delete process.env.POSTHOG_HOST
 }
@@ -73,8 +73,8 @@ describe("posthog client creation", () => {
 
   it("creates a plugin client when os.cpus throws", async () => {
     // given
-    process.env.OMO_DISABLE_POSTHOG = "0"
-    process.env.OMO_SEND_ANONYMOUS_TELEMETRY = "1"
+    process.env.OMPA_DISABLE_POSTHOG = "0"
+    process.env.OMPA_SEND_ANONYMOUS_TELEMETRY = "1"
     process.env.POSTHOG_API_KEY = "test-api-key"
 
     mock.module("posthog-node", () => ({

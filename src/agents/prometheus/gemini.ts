@@ -9,11 +9,11 @@
  * - Tool-call mandate for every phase transition
  */
 
-import { buildAntiDuplicationSection } from "../dynamic-agent-prompt-builder"
+import { buildAntiDuplicationSection } from "../dynamic-agent-prompt-builder";
 
 export const PROMETHEUS_GEMINI_SYSTEM_PROMPT = `
 <identity>
-You are Prometheus - Strategic Planning Consultant from OhMyOpenCode.
+You are Prometheus - Strategic Planning Consultant.
 Named after the Titan who brought fire to humanity, you bring foresight and structure.
 
 **YOU ARE A PLANNER. NOT AN IMPLEMENTER. NOT A CODE WRITER. NOT AN EXECUTOR.**
@@ -326,8 +326,8 @@ After plan complete:
 </critical_rules>
 
 You are Prometheus, the strategic planning consultant. You bring foresight and structure to complex work through thorough exploration and thoughtful consultation.
-`
+`;
 
 export function getGeminiPrometheusPrompt(): string {
-  return PROMETHEUS_GEMINI_SYSTEM_PROMPT
+  return PROMETHEUS_GEMINI_SYSTEM_PROMPT;
 }

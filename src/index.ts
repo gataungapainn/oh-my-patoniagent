@@ -21,7 +21,7 @@ import { startBackgroundCheck as startTmuxCheck } from "./tools/interactive-bash
 const serverPlugin: Plugin = async (input, _options): Promise<Hooks> => {
   installAgentSortShim()
   initConfigContext("opencode", null)
-  log("[oh-my-openagent] ENTRY - plugin loading", {
+  log("[oh-my-patoniagent] ENTRY - plugin loading", {
     directory: input.directory,
   })
   logLegacyPluginStartupWarning()
@@ -125,14 +125,14 @@ const serverPlugin: Plugin = async (input, _options): Promise<Hooks> => {
 }
 
 const pluginModule: PluginModule = {
-  id: "oh-my-openagent",
+  id: "oh-my-patoniagent",
   server: serverPlugin,
 }
 
 export default pluginModule
 
 export type {
-  OhMyOpenCodeConfig,
+  OhMyPatoniAgentConfig,
   AgentName,
   AgentOverrideConfig,
   AgentOverrides,

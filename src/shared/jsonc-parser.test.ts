@@ -156,7 +156,7 @@ describe("parseJsonc", () => {
     const jsonc = `\uFEFF{
       // Windows-saved file with BOM
       "$schema": "https://opencode.ai/config.json",
-      "plugin": ["oh-my-openagent@3.15.3"],
+      "plugin": ["oh-my-patoniagent@3.15.3"],
     }`
 
     // when
@@ -164,7 +164,7 @@ describe("parseJsonc", () => {
 
     // then
     expect(result.$schema).toBe("https://opencode.ai/config.json")
-    expect(result.plugin).toEqual(["oh-my-openagent@3.15.3"])
+    expect(result.plugin).toEqual(["oh-my-patoniagent@3.15.3"])
   })
 })
 
@@ -263,7 +263,7 @@ describe("readJsoncFile", () => {
     const jsonBytes = Buffer.from(`{
       // Created on Windows with BOM
       "$schema": "https://opencode.ai/config.json",
-      "plugin": ["oh-my-openagent@3.15.3"]
+      "plugin": ["oh-my-patoniagent@3.15.3"]
     }`)
     writeFileSync(testFile, Buffer.concat([bomBytes, jsonBytes]))
 
@@ -273,7 +273,7 @@ describe("readJsoncFile", () => {
     // then
     expect(result).not.toBeNull()
     expect(result?.$schema).toBe("https://opencode.ai/config.json")
-    expect(result?.plugin).toEqual(["oh-my-openagent@3.15.3"])
+    expect(result?.plugin).toEqual(["oh-my-patoniagent@3.15.3"])
 
     rmSync(testDir, { recursive: true, force: true })
   })
@@ -338,52 +338,52 @@ describe("detectPluginConfigFile", () => {
     clearPluginConfigFileDetectionCache()
   })
 
-  test("prefers oh-my-openagent over oh-my-opencode when both jsonc files exist", () => {
+  test("prefers oh-my-patoniagent over oh-my-patoniagent when both jsonc files exist", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-openagent.jsonc"), "{}")
-    writeFileSync(join(testDir, "oh-my-opencode.jsonc"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.jsonc"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.jsonc"), "{}")
 
     // when
     const result = detectPluginConfigFile(testDir)
 
     // then
     expect(result.format).toBe("jsonc")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.jsonc"))
-    expect(result.legacyPath).toBe(join(testDir, "oh-my-opencode.jsonc"))
+    expect(result.path).toBe(join(testDir, "oh-my-patoniagent.jsonc"))
+    expect(result.legacyPath).toBe(join(testDir, "oh-my-patoniagent.jsonc"))
 
     rmSync(testDir, { recursive: true, force: true })
   })
 
-  test("falls back to oh-my-opencode when oh-my-openagent doesn't exist", () => {
+  test("falls back to oh-my-patoniagent when oh-my-patoniagent doesn't exist", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-opencode.jsonc"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.jsonc"), "{}")
 
     // when
     const result = detectPluginConfigFile(testDir)
 
     // then
     expect(result.format).toBe("jsonc")
-    expect(result.path).toBe(join(testDir, "oh-my-opencode.jsonc"))
+    expect(result.path).toBe(join(testDir, "oh-my-patoniagent.jsonc"))
     expect(result.legacyPath).toBeUndefined()
 
     rmSync(testDir, { recursive: true, force: true })
   })
 
-  test("loads oh-my-openagent.json before oh-my-opencode.json when no jsonc exists", () => {
+  test("loads oh-my-patoniagent.json before oh-my-patoniagent.json when no jsonc exists", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-openagent.json"), "{}")
-    writeFileSync(join(testDir, "oh-my-opencode.json"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.json"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.json"), "{}")
 
     // when
     const result = detectPluginConfigFile(testDir)
 
     // then
     expect(result.format).toBe("json")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.json"))
-    expect(result.legacyPath).toBe(join(testDir, "oh-my-opencode.json"))
+    expect(result.path).toBe(join(testDir, "oh-my-patoniagent.json"))
+    expect(result.legacyPath).toBe(join(testDir, "oh-my-patoniagent.json"))
 
     rmSync(testDir, { recursive: true, force: true })
   })
@@ -398,7 +398,7 @@ describe("detectPluginConfigFile", () => {
 
     // then
     expect(result.format).toBe("none")
-    expect(result.path).toBe(join(emptyDir, "oh-my-openagent.json"))
+    expect(result.path).toBe(join(emptyDir, "oh-my-patoniagent.json"))
 
     rmSync(testDir, { recursive: true, force: true })
   })
@@ -406,31 +406,31 @@ describe("detectPluginConfigFile", () => {
   test("prefers canonical jsonc over legacy json when both exist", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-opencode.json"), "{}")
-    writeFileSync(join(testDir, "oh-my-openagent.jsonc"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.json"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.jsonc"), "{}")
 
     // when
     const result = detectPluginConfigFile(testDir)
 
     // then
     expect(result.format).toBe("jsonc")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.jsonc"))
-    expect(result.legacyPath).toBe(join(testDir, "oh-my-opencode.json"))
+    expect(result.path).toBe(join(testDir, "oh-my-patoniagent.jsonc"))
+    expect(result.legacyPath).toBe(join(testDir, "oh-my-patoniagent.json"))
 
     rmSync(testDir, { recursive: true, force: true })
   })
 
-  test("loads oh-my-openagent when only canonical jsonc exists", () => {
+  test("loads oh-my-patoniagent when only canonical jsonc exists", () => {
     // given
     if (!existsSync(testDir)) mkdirSync(testDir, { recursive: true })
-    writeFileSync(join(testDir, "oh-my-openagent.jsonc"), "{}")
+    writeFileSync(join(testDir, "oh-my-patoniagent.jsonc"), "{}")
 
     // when
     const result = detectPluginConfigFile(testDir)
 
     // then
     expect(result.format).toBe("jsonc")
-    expect(result.path).toBe(join(testDir, "oh-my-openagent.jsonc"))
+    expect(result.path).toBe(join(testDir, "oh-my-patoniagent.jsonc"))
     expect(result.legacyPath).toBeUndefined()
 
     rmSync(testDir, { recursive: true, force: true })
