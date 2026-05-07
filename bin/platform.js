@@ -4,10 +4,10 @@
 /**
  * Get the platform-specific package name
  * @param {{ platform: string, arch: string, libcFamily?: string | null, packageBaseName?: string }} options
- * @returns {string} Package name like "oh-my-patoniagent-darwin-arm64"
+ * @returns {string} Package name like "oh-my-opencode-darwin-arm64"
  * @throws {Error} If libc cannot be detected on Linux
  */
-export function getPlatformPackage({ platform, arch, libcFamily, packageBaseName = "oh-my-patoniagent" }) {
+export function getPlatformPackage({ platform, arch, libcFamily,   packageBaseName = "oh-my-opencode" }) {
   let suffix = "";
   if (platform === "linux") {
     if (libcFamily === null || libcFamily === undefined) {
@@ -27,7 +27,7 @@ export function getPlatformPackage({ platform, arch, libcFamily, packageBaseName
 }
 
 /** @param {{ platform: string, arch: string, libcFamily?: string | null, preferBaseline?: boolean, packageBaseName?: string }} options */
-export function getPlatformPackageCandidates({ platform, arch, libcFamily, preferBaseline = false, packageBaseName = "oh-my-patoniagent" }) {
+export function getPlatformPackageCandidates({ platform, arch, libcFamily, preferBaseline = false,   packageBaseName = "oh-my-opencode" }) {
   const primaryPackage = getPlatformPackage({ platform, arch, libcFamily, packageBaseName });
   const baselinePackage = getBaselinePlatformPackage({ platform, arch, libcFamily, packageBaseName });
 
@@ -39,7 +39,7 @@ export function getPlatformPackageCandidates({ platform, arch, libcFamily, prefe
 }
 
 /** @param {{ platform: string, arch: string, libcFamily?: string | null, packageBaseName?: string }} options */
-function getBaselinePlatformPackage({ platform, arch, libcFamily, packageBaseName = "oh-my-patoniagent" }) {
+function getBaselinePlatformPackage({ platform, arch, libcFamily,   packageBaseName = "oh-my-opencode" }) {
   if (arch !== "x64") {
     return null;
   }
