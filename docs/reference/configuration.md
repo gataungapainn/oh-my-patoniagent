@@ -1,6 +1,6 @@
 # Configuration Reference
 
-Complete reference for Oh My OpenCode plugin configuration. During the rename transition, the runtime recognizes both `oh-my-openagent.json[c]` and legacy `oh-my-opencode.json[c]` files.
+Complete reference for Oh My PatoniAgent plugin configuration. During the rename transition, the runtime recognizes both `oh-my-patoniagent.json[c]` and legacy `oh-my-patoniagent.json[c]` files.
 
 ---
 
@@ -45,28 +45,28 @@ Complete reference for Oh My OpenCode plugin configuration. During the rename tr
 
 User config loads first. Project configs are discovered by walking from the working directory up to `$HOME`; closer configs win. If the working directory is outside `$HOME`, only that directory is checked.
 
-1. Walked configs: `.opencode/oh-my-openagent.json[c]` or legacy `.opencode/oh-my-opencode.json[c]`
+1. Walked configs: `.opencode/oh-my-patoniagent.json[c]` or legacy `.opencode/oh-my-patoniagent.json[c]`
 2. User config (`.jsonc` preferred over `.json`):
 
 | Platform    | Path candidates |
 | ----------- | --------------- |
-| macOS/Linux | `~/.config/opencode/oh-my-openagent.json[c]`, `~/.config/opencode/oh-my-opencode.json[c]` |
-| Windows     | `%APPDATA%\opencode\oh-my-openagent.json[c]`, `%APPDATA%\opencode\oh-my-opencode.json[c]` |
+| macOS/Linux | `~/.config/opencode/oh-my-patoniagent.json[c]`, `~/.config/opencode/oh-my-patoniagent.json[c]` |
+| Windows     | `%APPDATA%\opencode\oh-my-patoniagent.json[c]`, `%APPDATA%\opencode\oh-my-patoniagent.json[c]` |
 
 **Security note:** `mcp_env_allowlist` is user-only. Walked configs cannot extend it.
 
-**Rename compatibility:** The published package and CLI binary remain `oh-my-opencode`. OpenCode plugin registration prefers `oh-my-openagent`, while legacy `oh-my-opencode` entries and config basenames still load during the transition. Config detection checks `oh-my-opencode` before `oh-my-openagent`, so if both plugin config basenames exist in the same directory, the legacy `oh-my-opencode.*` file currently wins.
+**Rename compatibility:** The published package and CLI binary remain `oh-my-patoniagent`. OpenCode plugin registration prefers `oh-my-patoniagent`, while legacy `oh-my-patoniagent` entries and config basenames still load during the transition. Config detection checks `oh-my-patoniagent` before `oh-my-patoniagent`, so if both plugin config basenames exist in the same directory, the legacy `oh-my-patoniagent.*` file currently wins.
 JSONC supports `// line comments`, `/* block comments */`, and trailing commas.
 
 Enable schema autocomplete:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json"
+  "$schema": "https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/dev/assets/oh-my-patoniagent.schema.json"
 }
 ```
 
-Run `bunx oh-my-opencode install` for guided setup. Run `opencode models` to list available models.
+Run `bunx oh-my-patoniagent install` for guided setup. Run `opencode models` to list available models.
 
 ### Quick Start Example
 
@@ -74,7 +74,7 @@ Here's a practical starting configuration:
 
 ```jsonc
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "$schema": "https://raw.githubusercontent.com/gataungapainn/oh-my-patoniagent/dev/assets/oh-my-patoniagent.schema.json",
 
   "agents": {
     // Main orchestrator: Claude Opus or Kimi K2.5 work best
@@ -350,7 +350,7 @@ Examples:
 - o-series models support `none` through `high` - `xhigh` is downgraded to `high`
 - GPT-5 supports `none`, `minimal`, `low`, `medium`, `high`, `xhigh` - all pass through
 
-Capability data comes from provider runtime metadata first. OmO also ships bundled models.dev-backed capability data, supports a refreshable local models.dev cache, and falls back to heuristic family detection plus alias rules when exact metadata is unavailable. `bunx oh-my-opencode doctor` surfaces capability diagnostics and warns when a configured model relies on compatibility fallback.
+Capability data comes from provider runtime metadata first. OmO also ships bundled models.dev-backed capability data, supports a refreshable local models.dev cache, and falls back to heuristic family detection plus alias rules when exact metadata is unavailable. `bunx oh-my-patoniagent doctor` surfaces capability diagnostics and warns when a configured model relies on compatibility fallback.
 
 
 #### Agent Provider Chains
@@ -381,7 +381,7 @@ Capability data comes from provider runtime metadata first. OmO also ships bundl
 | **unspecified-high**   | `claude-opus-4-7`   | `anthropic\|github-copilot\|opencode/claude-opus-4-7 (max)` → `openai\|github-copilot\|opencode/gpt-5.5 (high)` → `zai-coding-plan\|opencode/glm-5` → `kimi-for-coding/k2p5` → `opencode-go/glm-5.1` → `opencode/kimi-k2.5` → `opencode\|moonshotai\|moonshotai-cn\|firmware\|ollama-cloud\|aihubmix/kimi-k2.5` |
 | **writing**            | `gemini-3-flash`    | `google\|github-copilot\|opencode/gemini-3-flash` → `opencode-go/kimi-k2.6` → `anthropic\|github-copilot\|opencode/claude-sonnet-4-6` → `opencode-go/minimax-m2.7` |
 
-Run `bunx oh-my-opencode doctor --verbose` to see effective model resolution for your config.
+Run `bunx oh-my-patoniagent doctor --verbose` to see effective model resolution for your config.
 
 ---
 
@@ -934,7 +934,7 @@ OmO can refresh a local models.dev capability snapshot on startup. This cache is
 Notes:
 
 - Startup refresh runs through the auto-update checker hook.
-- Manual refresh is available via `bunx oh-my-opencode refresh-model-capabilities`.
+- Manual refresh is available via `bunx oh-my-patoniagent refresh-model-capabilities`.
 - Provider runtime metadata still takes priority when OmO resolves capabilities for compatibility checks.
 
 ### Hashline Edit
@@ -1004,8 +1004,8 @@ When enabled, two companion hooks are active: `hashline-read-enhancer` (annotate
 | Variable              | Description                                                       |
 | --------------------- | ----------------------------------------------------------------- |
 | `OPENCODE_CONFIG_DIR` | Override OpenCode config directory (useful for profile isolation) |
-| `OMO_SEND_ANONYMOUS_TELEMETRY` | Set to `0`, `false`, or `no` to disable anonymous telemetry |
-| `OMO_DISABLE_POSTHOG` | Legacy telemetry opt-out flag. Set to `1` or `true` to disable PostHog |
+| `OMPA_SEND_ANONYMOUS_TELEMETRY` | Set to `0`, `false`, or `no` to disable anonymous telemetry |
+| `OMPA_DISABLE_POSTHOG` | Legacy telemetry opt-out flag. Set to `1` or `true` to disable PostHog |
 | `POSTHOG_API_KEY` | Optional override for the built-in PostHog project API key |
 | `POSTHOG_HOST` | Override the PostHog ingestion host. Defaults to `https://us.i.posthog.com` |
 

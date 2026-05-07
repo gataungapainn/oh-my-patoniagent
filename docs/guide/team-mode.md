@@ -14,7 +14,7 @@ OFF by default. Enable via JSONC config.
 
 ## Enable
 
-Add to `~/.config/opencode/oh-my-opencode.jsonc` (or project `.opencode/oh-my-opencode.jsonc`):
+Add to `~/.config/opencode/oh-my-patoniagent.jsonc` (or project `.opencode/oh-my-patoniagent.jsonc`):
 
 ```jsonc
 {
@@ -106,7 +106,7 @@ When enabled, each member gets a dedicated tmux pane attached to that member's s
 
 ## Diagnostics
 
-`bunx oh-my-opencode doctor` includes a `team-mode` check showing tmux/git availability, declared team count, and active runtime dirs.
+`bunx oh-my-patoniagent doctor` includes a `team-mode` check showing tmux/git availability, declared team count, and active runtime dirs.
 
 ## Storage layout
 

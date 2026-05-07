@@ -1,6 +1,6 @@
 # Orchestration System Guide
 
-Oh My OpenAgent's orchestration system transforms a simple AI agent into a coordinated development team through **separation of planning and execution**.
+Oh My PatoniAgent's orchestration system transforms a simple AI agent into a coordinated development team through **separation of planning and execution**.
 
 ---
 
@@ -478,7 +478,7 @@ Use the `ulw` keyword in Sisyphus when:
 
 ## Configuration
 
-You can control related features in `oh-my-openagent.json`:
+You can control related features in `oh-my-patoniagent.json`:
 
 ```jsonc
 {

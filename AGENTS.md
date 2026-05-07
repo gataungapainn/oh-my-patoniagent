@@ -1,15 +1,15 @@
-# oh-my-opencode — OpenCode Plugin
+# oh-my-patoniagent — OpenCode Plugin
 
 **Generated:** 2026-04-18 | **Commit:** 2892ca4a | **Branch:** dev
 
 ## OVERVIEW
 
-OpenCode plugin (npm: `oh-my-opencode`, dual-published as `oh-my-openagent` during transition) extending Claude Code with 11 agents, 52 lifecycle hooks, 26 tools, 3-tier MCP system (built-in + .mcp.json + skill-embedded), Hashline LINE#ID edit tool, IntentGate classifier, and Claude Code compatibility. 1766 TypeScript source files, 377k LOC, 104 barrel index.ts files. Entry: `src/index.ts` → 5-step init (loadConfig → createManagers → createTools → createHooks → createPluginInterface).
+OpenCode plugin (npm: `oh-my-patoniagent`, dual-published as `oh-my-patoniagent` during transition) extending Claude Code with 11 agents, 52 lifecycle hooks, 26 tools, 3-tier MCP system (built-in + .mcp.json + skill-embedded), Hashline LINE#ID edit tool, IntentGate classifier, and Claude Code compatibility. 1766 TypeScript source files, 377k LOC, 104 barrel index.ts files. Entry: `src/index.ts` → 5-step init (loadConfig → createManagers → createTools → createHooks → createPluginInterface).
 
 ## STRUCTURE
 
 ```
-oh-my-opencode/
+oh-my-patoniagent/
 ├── src/
 │   ├── index.ts              # Plugin entry: default export `pluginModule`, shape `{ id, server }`
 │   ├── plugin-config.ts      # JSONC multi-level config: user → project → defaults (Zod v4)
@@ -17,7 +17,7 @@ oh-my-opencode/
 │   ├── hooks/                # 52 lifecycle hooks across dedicated modules and standalone files
 │   ├── tools/                # 26 tools across 16 directories (includes Hashline edit with LINE#ID content hashing)
 │   ├── features/             # 20 feature modules (background-agent, skill-loader, tmux, MCP-OAuth, skill-mcp-manager, team-mode, etc.)
-│   ├── shared/               # 170+ utility files (barrel-exported, logger → /tmp/oh-my-opencode.log)
+│   ├── shared/               # 170+ utility files (barrel-exported, logger → /tmp/oh-my-patoniagent.log)
 │   ├── config/               # Zod v4 schema system (32 files)
 │   ├── cli/                  # CLI: install, run, doctor, mcp-oauth (Commander.js)
 │   ├── mcp/                  # 3 built-in remote MCPs (websearch, context7, grep_app)
@@ -69,7 +69,7 @@ pluginModule.server(input, options)
 | Add new command | `src/features/builtin-commands/` | Template in templates/ |
 | Add new CLI command | `src/cli/cli-program.ts` | Commander.js subcommand |
 | Add new doctor check | `src/cli/doctor/checks/` | Register in checks/index.ts |
-| Modify config schema | `src/config/schema/` + update root schema | Zod v4, add to OhMyOpenCodeConfigSchema |
+| Modify config schema | `src/config/schema/` + update root schema | Zod v4, add to OhMyPatoniAgentConfigSchema |
 | Add new category | `src/tools/delegate-task/constants.ts` | DEFAULT_CATEGORIES + CATEGORY_MODEL_REQUIREMENTS |
 | Debug provider errors | `src/hooks/runtime-fallback/` | Reactive error recovery (distinct from model-fallback) |
 | External notifications | `src/openclaw/` | Bidirectional Discord/Telegram/webhook integration |
@@ -79,7 +79,7 @@ pluginModule.server(input, options)
 ## MULTI-LEVEL CONFIG
 
 ```
-Project (.opencode/oh-my-opencode.jsonc)  →  User (~/.config/opencode/oh-my-opencode.jsonc)  →  Defaults
+Project (.opencode/oh-my-patoniagent.jsonc)  →  User (~/.config/opencode/oh-my-patoniagent.jsonc)  →  Defaults
 ```
 
 - `agents`, `categories`, `claude_code`: deep merged recursively (prototype-pollution-safe)
@@ -113,7 +113,7 @@ Fields: agents (14 overridable, 21 fields each), categories (8 built-in + custom
 - **Module structure**: index.ts barrel exports, no catch-all files (utils.ts, helpers.ts banned), 200 LOC soft limit
 - **Imports**: relative within module, barrel imports across modules (`import { log } from "./shared"`)
 - **No path aliases**: no `@/` -- relative imports only
-- **Dual package**: `oh-my-opencode` + `oh-my-openagent` published simultaneously (transition period)
+- **Dual package**: `oh-my-patoniagent` + `oh-my-patoniagent` published simultaneously (transition period)
 
 ## ANTI-PATTERNS
 
@@ -137,9 +137,9 @@ bun test                    # Bun test suite
 bun run build              # Build plugin (ESM + declarations + schema)
 bun run build:all          # Build + platform binaries
 bun run typecheck           # tsc --noEmit
-bunx oh-my-opencode install # Interactive setup
-bunx oh-my-opencode doctor  # Health diagnostics
-bunx oh-my-opencode run     # Non-interactive session
+bunx oh-my-patoniagent install # Interactive setup
+bunx oh-my-patoniagent doctor  # Health diagnostics
+bunx oh-my-patoniagent run     # Non-interactive session
 ```
 
 ## CI/CD
@@ -147,7 +147,7 @@ bunx oh-my-opencode run     # Non-interactive session
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | ci.yml | push/PR to master/dev | Tests (split: mock-heavy isolated + batch), typecheck, build, schema auto-commit |
-| publish.yml | manual dispatch | Version bump, dual npm publish (oh-my-opencode + oh-my-openagent), platform binaries, GitHub release |
+| publish.yml | manual dispatch | Version bump, dual npm publish (oh-my-patoniagent + oh-my-patoniagent), platform binaries, GitHub release |
 | publish-platform.yml | called by publish | 11 platform binaries via bun compile (darwin/linux/windows) |
 | sisyphus-agent.yml | @mention / dispatch | AI agent handles issues/PRs |
 | refresh-model-capabilities.yml | weekly schedule / dispatch | Auto-refresh model capabilities from models.dev API |
@@ -156,7 +156,7 @@ bunx oh-my-opencode run     # Non-interactive session
 
 ## NOTES
 
-- Logger writes to `/tmp/oh-my-opencode.log` -- check there for debugging
+- Logger writes to `/tmp/oh-my-patoniagent.log` -- check there for debugging
 - Background tasks: 5 concurrent per model/provider (configurable, circuit breaker support)
 - Plugin load timeout: 10s for Claude Code plugins
 - Model fallback: per-agent chains in `shared/model-requirements.ts`, not a single global priority
