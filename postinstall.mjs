@@ -1,16 +1,13 @@
 // postinstall.mjs
-// Runs after npm install to verify platform binary is available
+// Runs after npm install to verify OpenCode version
 
 import { readFileSync } from "node:fs";
-import { createRequire } from "node:module";
-import { getPlatformPackageCandidates, getBinaryPath } from "./bin/platform.js";
-
-const require = createRequire(import.meta.url);
+import { execSync } from "node:child_process";
 
 const MIN_OPENCODE_VERSION = "1.4.0";
 
 /**
- * Parse version string into numeric parts
+ * Parse version string to numeric parts
  * @param {string} version
  * @returns {number[]}
  */
@@ -34,8 +31,8 @@ function compareVersions(current, minimum) {
   const length = Math.max(currentParts.length, minimumParts.length);
 
   for (let index = 0; index < length; index++) {
-    const currentPart = currentParts[index] ?? 0;
-    const minimumPart = minimumParts[index] ?? 0;
+    const currentPart = currentParts[index] || 0;
+    const minimumPart = minimumParts[index] || 0;
     if (currentPart > minimumPart) return true;
     if (currentPart < minimumPart) return false;
   }
@@ -49,7 +46,7 @@ function compareVersions(current, minimum) {
  */
 function checkOpenCodeVersion() {
   try {
-    const result = require("child_process").execSync("opencode --version", {
+    const result = execSync("opencode --version", {
       encoding: "utf-8",
       stdio: ["pipe", "pipe", "ignore"],
     });
@@ -61,73 +58,16 @@ function checkOpenCodeVersion() {
   }
 }
 
-/**
- * Detect libc family on Linux
- */
-function getLibcFamily() {
-  if (process.platform !== "linux") {
-    return undefined;
-  }
-  
-  try {
-    const detectLibc = require("detect-libc");
-    return detectLibc.familySync();
-  } catch {
-    return null;
-  }
-}
-
-function getPackageBaseName() {
-  try {
-    const packageJson = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8"));
-    return packageJson.name || "oh-my-patoniagent";
-  } catch {
-    return "oh-my-patoniagent";
-  }
-}
-
 function main() {
-  const { platform, arch } = process;
-  const libcFamily = getLibcFamily();
-  const packageBaseName = getPackageBaseName();
-
   // Check opencode version requirement
   const versionCheck = checkOpenCodeVersion();
   if (versionCheck.version && !versionCheck.ok) {
-    console.warn(`⚠ oh-my-patoniagent requires OpenCode >= ${MIN_OPENCODE_VERSION}`);
+    console.warn(`\n⚠ oh-my-patoniagent requires OpenCode >= ${MIN_OPENCODE_VERSION}`);
     console.warn(`  Detected: ${versionCheck.version}`);
-    console.warn(`  Please update OpenCode to avoid compatibility issues.`);
+    console.warn(`  Please update OpenCode to avoid compatibility issues.\n`);
   }
 
-  try {
-    const packageCandidates = getPlatformPackageCandidates({
-      platform,
-      arch,
-      libcFamily,
-      packageBaseName,
-    });
-
-    const resolvedPackage = packageCandidates.find((pkg) => {
-      try {
-        require.resolve(getBinaryPath(pkg, platform));
-        return true;
-      } catch {
-        return false;
-      }
-    });
-
-    if (!resolvedPackage) {
-      throw new Error(
-        `No platform binary package installed. Tried: ${packageCandidates.join(", ")}`
-      );
-    }
-
-    console.log(`✓ oh-my-patoniagent binary installed for ${platform}-${arch} (${resolvedPackage})`);
-  } catch (error) {
-    console.warn(`⚠ oh-my-patoniagent: ${error.message}`);
-    console.warn(`  The CLI may not work on this platform.`);
-    // Don't fail installation - let user try anyway
-  }
+  console.log(`✓ oh-my-patoniagent plugin ready to use.`);
 }
 
 main();
